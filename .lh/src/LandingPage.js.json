@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/LandingPage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1662556605313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662556715180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-\r\n+import {}\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556722283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {}\r\n+import {d}\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556729564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {d}\r\n+import {db,app} fro\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556735996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {db,app} fro\r\n+import {db,app} from \"\"\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556742898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {db,app} from \"\"\r\n+import {db,app} from \"./Components/\"\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556748796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {db,app} from \"./Components/\"\r\n+import {db,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n \r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662556757005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n import {db,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-\r\n+console.log()\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662556779859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {db,app} from \"./Components/firebase/connect\"\r\n+import {datab,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-console.log()\r\n+console.log(db)\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662556788494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {datab,app} from \"./Components/firebase/connect\"\r\n+import {database,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-console.log(db)\r\n+console.log(datab)\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662556794461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n import {database,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-console.log(datab)\r\n+console.log(dataase)\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662556800747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n import {database,app} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-console.log(dataase)\r\n+console.log(datbase)\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662557751930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {database,app} from \"./Components/firebase/connect\"\r\n+import {db} from \"./Components/firebase/connect\"\r\n function landingPage() {\r\n-console.log(datbase)\r\n+console.log(database)\r\n   return (\r\n     <div>\r\n         <Header/>\r\n      \r\n"
+                },
+                {
+                    "date": 1662557758551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header';\r\n import Reader from './Components/Reader';\r\n-import {db} from \"./Components/firebase/c\"\r\n+import {db} from \"./Components/firebase/\"\r\n function landingPage() {\r\n console.log(database)\r\n   return (\r\n     <div>\r\n"
+                }
+            ],
+            "date": 1662556605313,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport Header from './Components/landingPage/Header';\r\nimport Reader from './Components/Reader';\r\n\r\nfunction landingPage() {\r\n\r\n  return (\r\n    <div>\r\n        <Header/>\r\n     \r\n    </div>\r\n  )\r\n}\r\n\r\nexport default landingPage"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/Components/landingPage/NewAccbtn.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1662560755370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662560761257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn >Create Account</button></div>\r\n+    <div><button className='btn'>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560766888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn'>Create Account</button></div>\r\n+    <div><button className='btn >Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560773117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn >Create Account</button></div>\r\n+    <div><button className='btn' >Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560781019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' >Create Account</button></div>\r\n+    <div><button className='btn' onClick={}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560786715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560830466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={()=>}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>window}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560838755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={()=>window}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>window.locati}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560844514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={()=>window.locati}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>window.location.path}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560875053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={()=>window.location.pathname}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>window.location.pathname=}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560898390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function NewAccbtn() {\r\n   return (\r\n-    <div><button className='btn' onClick={()=>window.location.pathname=\"/NewA\"}>Create Account</button></div>\r\n+    <div><button className='btn' onClick={()=>window.location.pathname=\"/NewAc\"}>Create Account</button></div>\r\n   )\r\n }\r\n \r\n export default NewAccbtn\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1662560755370,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction NewAccbtn() {\r\n  return (\r\n    <div><button className='btn >Create Account</button></div>\r\n  )\r\n}\r\n\r\nexport default NewAccbtn"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/Components/firebase/connect.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1662480526892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662480695549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n // Import the functions you need from the SDKs you need\r\n import { initializeApp } from \"firebase/app\";\r\n import { getAnalytics } from \"firebase/analytics\";\r\n+\r\n // TODO: Add SDKs for Firebase products that you want to use\r\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n"
+                },
+                {
+                    "date": 1662480727563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // Import the functions you need from the SDKs you need\r\n import { initializeApp } from \"firebase/app\";\r\n import { getAnalytics } from \"firebase/analytics\";\r\n-\r\n+import { getDatabase } from \"firebase/database\";\r\n // TODO: Add SDKs for Firebase products that you want to use\r\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n"
+                },
+                {
+                    "date": 1662480775199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n   projectId: \"queue-mangement-941da\",\r\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n-  measurementId: \"G-R909974S91\"\r\n+  measurementId: \"G-R909974S91\",\r\n+  \r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480783884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  \r\n+  database\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480789140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  database\r\n+  databaseURL\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480794694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL\r\n+  databaseURL:\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480819053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL:\r\n+  databaseURL:\"https://console.firebase.google.com/project/queue-mangement-941da/database/queue-mangemen\"\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480835434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL:\"https://console.firebase.google.com/project/queue-mangement-941da/database/queue-mangemen\"\r\n+  databaseURL:\"https://console.fire\"\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480859620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL:\"https://console.fire\"\r\n+  databaseURL:\"https://console.firebase.google.com/project/queue-mangement-941da/database/queue-mangement-941da-default-rtdb/data/~2F\"\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480865970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL:\"https://console.firebase.google.com/project/queue-mangement-941da/database/queue-mangement-941da-default-rtdb/data/~2F\"\r\n+  databaseURL:\"\"\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480903398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   storageBucket: \"queue-mangement-941da.appspot.com\",\r\n   messagingSenderId: \"1015137183481\",\r\n   appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n   measurementId: \"G-R909974S91\",\r\n-  databaseURL:\"\"\r\n+  databaseURL:\"https://queue-mangement-941da-default-rtdb.asia-southeast1.firebasedatabase.app\"\r\n };\r\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1662480938067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,4 +20,5 @@\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n const analytics = getAnalytics(app);\r\n+co\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662480943411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,5 @@\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n const analytics = getAnalytics(app);\r\n-const data\n\\ No newline at end of file\n+const database\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662557372578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // Import the functions you need from the SDKs you need\r\n import { initializeApp } from \"firebase/app\";\r\n import { getAnalytics } from \"firebase/analytics\";\r\n-import { getDatabase,e } from \"firebase/database\";\r\n+import { getDatabase,re4f } from \"firebase/database\";\r\n // TODO: Add SDKs for Firebase products that you want to use\r\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n"
+                }
+            ],
+            "date": 1662480526892,
+            "name": "Commit-0",
+            "content": "// Import the functions you need from the SDKs you need\r\nimport { initializeApp } from \"firebase/app\";\r\nimport { getAnalytics } from \"firebase/analytics\";\r\n// TODO: Add SDKs for Firebase products that you want to use\r\n// https://firebase.google.com/docs/web/setup#available-libraries\r\n\r\n// Your web app's Firebase configuration\r\n// For Firebase JS SDK v7.20.0 and later, measurementId is optional\r\nconst firebaseConfig = {\r\n  apiKey: \"AIzaSyCordLSv_X9Fh0bizCf7_mTZNZQO5qa3C8\",\r\n  authDomain: \"queue-mangement-941da.firebaseapp.com\",\r\n  projectId: \"queue-mangement-941da\",\r\n  storageBucket: \"queue-mangement-941da.appspot.com\",\r\n  messagingSenderId: \"1015137183481\",\r\n  appId: \"1:1015137183481:web:766d2cdf9904df811be428\",\r\n  measurementId: \"G-R909974S91\"\r\n};\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);\r\nconst analytics = getAnalytics(app);"
+        }
+    ]
+}

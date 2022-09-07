@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/Components/NewAccount/Newform.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1662560420945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662560435798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-function Newform() {\r\n+function() {\r\n   return (\r\n-    <div>Newform</div>\r\n+    <div</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default Newform\n+export default\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560444155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-function() {\r\n+function Newform() {\r\n   return (\r\n-    <div</div>\r\n+    <div>Newform</div>\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default\n+export default Newform\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560451293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Newform() {\r\n   return (\r\n-    <div>Newform</div>\r\n+    <div></div>\r\n   )\r\n }\r\n \r\n export default Newform\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561471419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import React from 'react'\r\n+\r\n+function Newform() {\r\n+  return (\r\n+    <div>\r\n+        \r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Newform\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561482433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,11 @@\n import React from 'react'\r\n \r\n function Newform() {\r\n   return (\r\n-    <div>\r\n-        \r\n+    <div className=''>\r\n+\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default Newform\n-import React from 'react'\r\n-\r\n-function Newform() {\r\n-  return (\r\n-    <div></div>\r\n-  )\r\n-}\r\n-\r\n export default Newform\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561603196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Newform() {\r\n   return (\r\n-    <div className=''>\r\n+    <div className='container mx-auto'>\r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662561612011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function Newform() {\r\n   return (\r\n     <div className='container mx-auto'>\r\n-<\r\n+<i\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662561632444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Newform() {\r\n   return (\r\n-    <div className='container h-48 w- mx-auto'>\r\n+    <div className='container h-48 w-s mx-auto'>\r\n <input\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1662560420945,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Newform() {\r\n  return (\r\n    <div>Newform</div>\r\n  )\r\n}\r\n\r\nexport default Newform"
+        }
+    ]
+}

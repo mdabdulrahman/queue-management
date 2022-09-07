@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1662561511414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662561517395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,7 @@\n }\r\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n-.form\n\\ No newline at end of file\n+.form{\r\n+    @apply \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561527707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n .form{\r\n-    @apply \r\n+    @apply bg-black \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561535398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n .form{\r\n-    @apply bg-black \r\n+    @apply bg-black w-screen\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561542727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n .form{\r\n-    @apply bg-black w-screen\r\n+    @apply bg-black w-screen h-full \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561548561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n .form{\r\n-    @apply bg-black w-screen h-full \r\n+    @apply bg-black w-screen h-full container\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561568725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,6 @@\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n .form{\r\n-    @apply bg-black w-screen h\r\n+    @apply bg-black w-screen \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662561953399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n }\r\n .btn:active{\r\n @apply primary-bg secondary-text\r\n }\r\n-.f\n\\ No newline at end of file\n+.fo\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1662561511414,
+            "name": "Commit-0",
+            "content": "@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;\r\n@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Righteous&display=swap');\r\n*{\r\n    font-family: 'Righteous', cursive;\r\n}\r\n.primary-text{\r\n    @apply text-zinc-800 \r\n}\r\n.primary-bg{\r\n    @apply bg-zinc-800\r\n}\r\n.secondary-text{\r\n    @apply text-zinc-100 \r\n}\r\n.secondary-bg{\r\n    @apply bg-zinc-100\r\n}\r\n.header{\r\n   @apply sticky primary-bg secondary-text h-12 flex justify-between items-center\r\n}\r\n.wrap{\r\n    @apply mx-10 text-lg\r\n}\r\n.btn{\r\n    @apply secondary-bg primary-text p-2 text-sm rounded\r\n}\r\n.btn:hover{\r\n    @apply ring ring-2 ring-zinc-200 ring-offset-1 ring-offset-zinc-800\r\n}\r\n.btn:active{\r\n@apply primary-bg secondary-text\r\n}\r\n.form"
+        }
+    ]
+}

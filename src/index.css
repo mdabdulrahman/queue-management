@@ -18,10 +18,10 @@
     @apply bg-zinc-100
 }
 .header{
-   @apply sticky primary-bg secondary-text h-12 flex justify-between items-center
+   @apply sticky primary-bg secondary-text h-12 flex justify-between shadow-md items-center
 }
 .wrap{
-    @apply mx-10 text-lg
+    @apply mx-6 text-lg
 }
 .btn{
     @apply secondary-bg primary-text p-2 text-sm rounded
@@ -31,4 +31,10 @@
 }
 .btn:active{
 @apply primary-bg secondary-text
+}
+.form{
+    @apply container h-full shadow rounded secondary-bg w-5/6 my-3  mx-auto
+}
+legend{
+    @apply primary-bg secondary-text px-3 py-1 shadow-lg rounded mb-6 mx-auto
 }

@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1662560522875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662560528967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,15 @@\n import './index.css';\r\n \r\n function App() {\r\n   if (window.location.pathname===\"/\"){\r\n-   \r\n+  }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n \r\n   </div>\r\n   );\r\n-  }\r\n+  \r\n }\r\n \r\n export default App;\r\n"
+                },
+                {
+                    "date": 1662560536896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import LandingPage from './LandingPage';\r\n import './index.css';\r\n \r\n function App() {\r\n+  let page;\r\n   if (window.location.pathname===\"/\"){\r\n   }\r\n   return (\r\n     <div className='App'>\r\n"
+                },
+                {
+                    "date": 1662560542089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n function App() {\r\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n+    page=\r\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n"
+                },
+                {
+                    "date": 1662560548510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function App() {\r\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n-    page=\r\n+    page=<LandingPage/>\r\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n"
+                },
+                {
+                    "date": 1662560558024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n-\r\n   </div>\r\n   );\r\n   \r\n }\r\n"
+                },
+                {
+                    "date": 1662560563796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n+  else\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1662560574120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n-  else\r\n+  else if(window)\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1662560582128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n-  else if(window)\r\n+  else if(window.location.pathname)\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1662560589727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n-  else if(window.location.pathname)\r\n+  else if(window.location.pathname===\"/New\")\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1662560599423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n-  else if(window.location.pathname===\"/New\")\r\n+  else if(window.location.pathname===\"/NewAccount\"){\r\n+    \r\n+  }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1662560605117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n   else if(window.location.pathname===\"/NewAccount\"){\r\n-    \r\n+    page\r\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n"
+                },
+                {
+                    "date": 1662560680213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n   else if(window.location.pathname===\"/NewAccount\"){\r\n-    page\r\n+    page=<\r\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n"
+                },
+                {
+                    "date": 1662560686594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import LandingPage from './LandingPage';\r\n import './index.css';\r\n+import NewAccount from './NewAccount';\r\n \r\n function App() {\r\n   let page;\r\n   if (window.location.pathname===\"/\"){\r\n     page=<LandingPage/>\r\n   }\r\n   else if(window.location.pathname===\"/NewAccount\"){\r\n-    page=<\r\n+    page=<NewAccount\r\n   }\r\n   return (\r\n     <div className='App'>\r\n   {page}\r\n"
+                }
+            ],
+            "date": 1662560522875,
+            "name": "Commit-0",
+            "content": "import LandingPage from './LandingPage';\r\nimport './index.css';\r\n\r\nfunction App() {\r\n  if (window.location.pathname===\"/\"){\r\n   \r\n  return (\r\n    <div className='App'>\r\n  {page}\r\n\r\n  </div>\r\n  );\r\n  }\r\n}\r\n\r\nexport default App;\r\n"
+        }
+    ]
+}

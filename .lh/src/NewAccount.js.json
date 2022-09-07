@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/NewAccount.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1662560632034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662560639578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import React from 'react'\r\n \r\n-function NewAccount() {\r\n+function \r\n+() {\r\n   return (\r\n-    <div>NewAccount</div>\r\n+    <div>\r\n+        \r\n\\ No newline at end of file\n+    </div>\r\n   )\r\n }\r\n \r\n-export default NewAccount\n+export default \r\n"
+                },
+                {
+                    "date": 1662560648368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n import React from 'react'\r\n \r\n-function \r\n-() {\r\n+function NewAccount() {\r\n   return (\r\n     <div>\r\n         \r\n     </div>\r\n   )\r\n }\r\n \r\n\\ No newline at end of file\n-export default \n+export default NewAccount\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662560653843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react'\r\n+import Header from './Components/landingPage/Header'\r\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        \r\n+        <Header\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662560660821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header\r\n+        <Header brtn/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662560706660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header brtn/>\r\n+        <Header btn=\"\"/>\r\n+        \r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662560733934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function NewAccount() {\r\n   return (\r\n     <div>\r\n         <Header btn=\"\"/>\r\n-        \r\n+        <\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662561222166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import React from 'react'\r\n import Header from './Components/landingPage/Header'\r\n+import Newform from './Components/NewAccount/Newform'\r\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"\"/>\r\n-        <\r\n+        <Header btn=\" \"/>\r\n+        <Newform/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662561230007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\" \"/>\r\n+        <Header btn=\"\"/>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662561258096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"\"/>\r\n+        <Header btn=\"create\"/>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662561427501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"create\"/>\r\n+        <Header btn=\"signIn\"/>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1662560632034,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction NewAccount() {\r\n  return (\r\n    <div>NewAccount</div>\r\n  )\r\n}\r\n\r\nexport default NewAccount"
+        }
+    ]
+}

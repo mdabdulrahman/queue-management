@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/Components/landingPage/Header.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1662560223984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662560230983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n import React from 'react'\r\n import SignInbtn from './SignInbtn'\r\n \r\n function Header() {\r\n-  \r\n+\r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap'>\r\n     Queue System\r\n    </div>\r\n    <div className='wrap'>\r\n-    <SignInbtn/>\r\n+    {}\r\n    </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662560240144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import SignInbtn from './SignInbtn'\r\n \r\n function Header() {\r\n-let btn\r\n+let btn;\r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap'>\r\n     Queue System\r\n"
+                },
+                {
+                    "date": 1662560306009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import SignInbtn from './SignInbtn'\r\n \r\n function Header(props) {\r\n let btn;\r\n-if (props.==)\r\n+if (props.b==)\r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap'>\r\n     Queue System\r\n"
+                }
+            ],
+            "date": 1662560223984,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport SignInbtn from './SignInbtn'\r\n\r\nfunction Header() {\r\n  \r\n  return (\r\n    <div className='header'>\r\n   <div className='wrap'>\r\n    Queue System\r\n   </div>\r\n   <div className='wrap'>\r\n    <SignInbtn/>\r\n   </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Header"
+        }
+    ]
+}
