@@ -19,7 +19,7 @@ else if(props.btn==""){
 
   return (
     <div className='header'>
-   <div className='wrap'>
+   <div className='wrap font-black'>
     Queue System
    </div>
    <div className='flex'>
