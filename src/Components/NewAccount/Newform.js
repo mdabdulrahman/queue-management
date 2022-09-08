@@ -31,7 +31,7 @@ function Newform() {
     <input type="text" className='form-control' name="state"></input>
     <label>District :</label>
     <input type="text" className='form-control' name="district"></input>
-    <button className='btn'>Register</button>
+    <button className='btn-secondary '>Register</button>
     </div>
     </fieldset>
     </div>

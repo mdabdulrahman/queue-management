@@ -2,7 +2,7 @@ import React from 'react'
 
 function SignInbtn() {
   return (
-    <div><button className='btn'>Sign In</button></div>
+    <div><button className='btn-primary'>Sign In</button></div>
   )
 }
 
