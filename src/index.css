@@ -58,9 +58,7 @@ legend{
     .wrap{
         @apply mx-2 text-justify
     }
-    .btn{
-        @apply p-2  rounded-sm
-    }
+    
     .header{
         @apply h-12
     }

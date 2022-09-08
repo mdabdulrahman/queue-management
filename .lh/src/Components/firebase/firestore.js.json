@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/Components/firebase/firestore.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1662651370440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662651486514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\r\n+import { doc, setDoc } from \"firebase/firestore\"; \r\n \r\n function firestore() {\r\n   return (\r\n     <div>firestore</div>\r\n"
+                },
+                {
+                    "date": 1662651565627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n import React from 'react'\r\n import { doc, setDoc } from \"firebase/firestore\"; \r\n \r\n function firestore() {\r\n+    await setDoc(doc(db, \"cities\", \"LA\"), {\r\n+        name: \"Los Angeles\",\r\n+        state: \"CA\",\r\n+        country: \"USA\"\r\n+      });\r\n   return (\r\n     <div>firestore</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662651575782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import { doc, setDoc } from \"firebase/firestore\"; \r\n \r\n function firestore() {\r\n-    await setDoc(doc(db, \"cities\", \"LA\"), {\r\n+    await setDoc(doc(db, \"New), {\r\n         name: \"Los Angeles\",\r\n         state: \"CA\",\r\n         country: \"USA\"\r\n       });\r\n"
+                },
+                {
+                    "date": 1662651588898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import { doc, setDoc } from \"firebase/firestore\"; \r\n \r\n function firestore() {\r\n-    await setDoc(doc(db, \"New), {\r\n+    setDoc(doc(db, \"NewAccount\"), {\r\n         name: \"Los Angeles\",\r\n         state: \"CA\",\r\n         country: \"USA\"\r\n       });\r\n"
+                },
+                {
+                    "date": 1662651638674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         state: \"CA\",\r\n         country: \"USA\"\r\n       });\r\n   return (\r\n-    <div>firestore</div>\r\n+    <div></div>\r\n   )\r\n }\r\n \r\n export default firestore\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1662651370440,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction firestore() {\r\n  return (\r\n    <div>firestore</div>\r\n  )\r\n}\r\n\r\nexport default firestore"
+        }
+    ]
+}
