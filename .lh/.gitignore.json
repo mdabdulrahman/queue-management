@@ -1,0 +1,34 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1662731423195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662731430287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # dependencies\r\n /node_modules\r\n /.pnp\r\n .pnp.js\r\n-/\r\n+/Components\r\n # testing\r\n /coverage\r\n \r\n # production\r\n"
+                },
+                {
+                    "date": 1662731442380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # dependencies\r\n /node_modules\r\n /.pnp\r\n .pnp.js\r\n-/Components\r\n+/Components/mailer/\r\n # testing\r\n /coverage\r\n \r\n # production\r\n"
+                },
+                {
+                    "date": 1662731452093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # dependencies\r\n /node_modules\r\n /.pnp\r\n .pnp.js\r\n-/Components/mailer/\r\n+/Components/mailer/mail\r\n # testing\r\n /coverage\r\n \r\n # production\r\n"
+                },
+                {
+                    "date": 1662737237071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # dependencies\r\n /node_modules\r\n /.pnp\r\n .pnp.js\r\n-/Components/mailer/mail\r\n+\r\n # testing\r\n /coverage\r\n \r\n # production\r\n"
+                }
+            ],
+            "date": 1662731423195,
+            "name": "Commit-0",
+            "content": "# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.\r\n\r\n# dependencies\r\n/node_modules\r\n/.pnp\r\n.pnp.js\r\n/\r\n# testing\r\n/coverage\r\n\r\n# production\r\n/build\r\n\r\n# misc\r\n.DS_Store\r\n.env.local\r\n.env.development.local\r\n.env.test.local\r\n.env.production.local\r\n\r\nnpm-debug.log*\r\nyarn-debug.log*\r\nyarn-error.log*\r\n"
+        }
+    ]
+}

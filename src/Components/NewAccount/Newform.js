@@ -1,13 +1,28 @@
-
-import React, { useRef } from 'react'
-import { doc, setDoc , collection, addDoc} from "firebase/firestore"; 
 import dbfirestore from '../firebase/DatabaseStore'
-import pic from "./ni.jpg"
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+import { doc, setDoc , collection, addDoc} from "firebase/firestore"; 
+
 function Newform() {
+
+    /* Sending email to new account */
+    emailjs.init("nsIPDphWPHf1B2KaP")
+let NewAccountMail=(obj)=>{
+emailjs.send('service_vm00no9', 'template_khsc83l',obj, 'nsIPDphWPHf1B2KaP')
+.then((result) => {
+    console.log(result.text);
+}, (error) => {
+    console.log(error.text);
+});}
+
+/* Adding to firestore */
 let add=()=>{
     try {
         const docRef =  addDoc(collection(dbfirestore, "NewAccount"),values());
         alert("Your Application has been sent :"+values().email)
+NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value})
+ 
+      
       } catch (e) {
         console.error("Error adding document: ", e);
       }
