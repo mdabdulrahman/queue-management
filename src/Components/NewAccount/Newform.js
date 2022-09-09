@@ -17,10 +17,12 @@ emailjs.send('service_vm00no9', 'template_khsc83l',obj, 'nsIPDphWPHf1B2KaP')
 
 /* Adding to firestore */
 let add=()=>{
+  
     try {
-        const docRef =  addDoc(collection(dbfirestore, "NewAccount"),values());
+        let aplno=String(values().aplno)
+        const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values());
         alert("Your Application has been sent :"+values().email)
-NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value})
+NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})
  
       
       } catch (e) {
@@ -43,6 +45,7 @@ NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.
     const district=useRef("")
 
    let values=()=>{return {
+        aplno:Math.ceil(Math.random()*10000000000),
         bname:bname.current.value,
         btype:btype.current.value,
         Oname:Oname.current.value,
