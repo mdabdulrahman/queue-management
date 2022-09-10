@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1662742689641,
@@ -100,6 +100,10 @@
                 {
                     "date": 1662809255025,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import \r\n+import c\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662813102147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <div className='success'>\r\n       <div className='flex justify-center'>  <img className='w-12' src={tick}></img></div>\r\n         {props.info}\r\n-    <button className='success-btn' on >OK</button>\r\n+    <button className='success-btn' onC >OK</button>\r\n     </div>\r\n \r\n   )\r\n }\r\n"
                 }
             ],
             "date": 1662742689641,

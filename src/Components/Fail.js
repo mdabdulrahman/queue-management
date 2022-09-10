@@ -5,7 +5,7 @@ function Fail(props) {
     <div className='fail'>
         <div className='flex justify-center'>  <img className='w-12' src={cross}></img></div>  
         {props.info}
-    <button className='fail-btn'>OK</button>
+    <button className='fail-btn' onClick={()=>{window.location.reload()}}>Try Again</button>
     </div>
   )
 }

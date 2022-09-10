@@ -1,7 +1,37 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import { countryList } from '../Countrylist'
+import { citiesList } from '../cities'
+import {statesList} from "../states"
 function Form(props) {
-  return (
+    const [country, setcountry] = useState("");
+    const [statusDisablestate, setstatusDisablestate] = useState(true);
+   const [city,setCity]=useState("")
+   const [statusDisablecity,setstatusDisablecity]=useState(true)
+    let countries=countryList.map((country)=>{ return <option value={country}></option>})
+
+    /* let cities=citiesList[country].map((s)=>{console.log(s)}) */
+let states=()=>{  if (country!=""){
+    try{
+       return statesList[country].map((st)=>{ return <option value={st}></option>})}
+        catch(e){
+           
+        }
+    }
+    else{
+    <option value="Select the Country"></option>}}
+
+    let cities=()=>{  if (city!=""){
+        try{
+           return citiesList[city].map((st)=>{ return <option value={st}></option>})}
+            catch(e){
+               
+            }
+        }
+        else{
+        <option value="Select the City"></option>}}
+
+
+    return (
     <div >
    
     <div >
@@ -20,18 +50,28 @@ function Form(props) {
 <label>Email Id :</label>
 <input type="email" className='form-control' ref={props.email}  name="email"></input>
 <label>Phone Number :</label>
-<input type="text" className='form-control'  ref={props.number} name="number"></input>
+<input type="tel" className='form-control'  ref={props.number} pattern="[0-9]*" name="number"></input>
 <label>Address of Shop :</label>
 <textarea type="text" className='h-3/4 form-control' ref={props.adrs}  name="adrs"></textarea>
 
 <label>Google Map location link : </label>
 <input type="url" name="gurl" ref={props.gurl} className='form-control '></input>
 <label>Country :</label>
-<input type="text" className='form-control' ref={props.country} name="country"></input>
+<input list='countries' className='form-control' ref={props.country} onChange={(e)=>{setcountry(e.target.value); setstatusDisablestate(false)}} name="country"></input>
+<datalist id='countries' >
+    {countries}
+</datalist>
 <label>State :</label>
-<input type="text" className='form-control' ref={props.state} name="state"></input>
-<label>District :</label>
-<input type="text" className='form-control' ref={props.district} name="district"></input>
+
+<input list="states" className='form-control' ref={props.state} onChange={(e)=>{setCity(e.target.value); setstatusDisablecity(false)}} name="state" disabled={statusDisablestate}></input>
+<datalist id='states'>
+{states()}
+</datalist>
+<label>City :</label>
+<input list="cities" className='form-control' ref={props.city} name="city" disabled={statusDisablecity}></input>
+<datalist id='cities'>
+{cities()}
+</datalist>
 <button className='btn-secondary ' onClick={()=>{props.add()}}>Register</button>
 </div>
 </fieldset>

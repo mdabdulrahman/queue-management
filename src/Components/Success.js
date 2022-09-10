@@ -6,7 +6,7 @@ function Success(props) {
     <div className='success'>
       <div className='flex justify-center'>  <img className='w-12' src={tick}></img></div>
         {props.info}
-    <button className='success-btn'>OK</button>
+    <button className='success-btn' onClick={()=>{window.location.reload()}} >OK</button>
     </div>
 
   )

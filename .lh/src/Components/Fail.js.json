@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1662808507046,
@@ -48,6 +48,14 @@
                 {
                     "date": 1662809708361,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import cross from \"./cross.png\"\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n-        <div className='flex justify-center'>  <img className='w-12' src={tick}></img></div>  \r\n+        <div className='flex justify-center'>  <img className='w-12' src={cross}></img></div>  \r\n         {props.info}\r\n     <button className='fail-btn'>OK</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662813333772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className='fail'>\r\n         <div className='flex justify-center'>  <img className='w-12' src={cross}></img></div>  \r\n         {props.info}\r\n-    <button className='fail-btn'>OK</button>\r\n+    <button className='fail-btn' >OK</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662813339394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className='fail'>\r\n         <div className='flex justify-center'>  <img className='w-12' src={cross}></img></div>  \r\n         {props.info}\r\n-    <button className='fail-btn' >OK</button>\r\n+    <button className='fail-btn' onClick={()=>{window.location.reload()}}></button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
                 }
             ],
             "date": 1662808507046,

@@ -25,10 +25,9 @@ let add=()=>{
         let aplno=String(values().aplno)
 
         const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values());
-        alert("Your Application has been sent :"+values().email)
+       
 NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})
 setApplicationNo(aplno) 
-
 setStatus(true)
       
       } catch (e) {
@@ -38,7 +37,9 @@ setStatus(true)
      
 }
 
-
+let validate=()=>{
+console.log(number.current.validity.valid);
+}
 
     const bname=useRef("")
     const btype=useRef("")
@@ -49,7 +50,7 @@ setStatus(true)
     const    gurl=useRef("")
     const  country=useRef("")
     const    state=useRef("")
-    const district=useRef("")
+    const city=useRef("")
 
    let values=()=>{return {
         aplno:Math.ceil(Math.random()*10000000000),
@@ -62,12 +63,12 @@ setStatus(true)
         gurl:gurl.current.value,
         country:country.current.value,
         state:state.current.value,
-        district:district.current.value
+        city:city.current.value
 
    }}
    if (Status==null){
   return (
-<Form bname={bname} btype={btype} Oname={Oname} email={email} number={number} adrs={adrs} gurl={gurl} country={country} district={district} state={state} add={add}/>
+<Form bname={bname} btype={btype} Oname={Oname} email={email} number={number} adrs={adrs} gurl={gurl} country={country} city={city} state={state} add={validate}/>
     )}
     else if (Status==true){
         return(<Success info={`Your Application has been Successfully submited ! Your Application NO : ${ApplicationNo} and Your Application will be reviwed in 24 hrs .Status will be shared via Mail`}/>)
