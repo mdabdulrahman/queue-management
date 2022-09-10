@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/Components/success.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1662742689641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662742697068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function success() {\r\n   return (\r\n-    <div>success</div>\r\n+    <div></div>\r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742705398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-function success() {\r\n+function success(props) {\r\n   return (\r\n-    <div></div>\r\n+    <div>{}</div>\r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742710740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function success(props) {\r\n   return (\r\n-    <div>{}</div>\r\n+    <div>{props}</div>\r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742717357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function success(props) {\r\n   return (\r\n-    <div>{props}</div>\r\n+    <div>{props.ingo}</div>\r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742724559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n \r\n function success(props) {\r\n   return (\r\n-    <div>{props.ingo}</div>\r\n+    <div>{props.info}</div>\r\n+    \r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742729708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react'\r\n \r\n function success(props) {\r\n   return (\r\n-    <div>{props.info}</div>\r\n-    \r\n+    <div>{props.info}\r\n+    </div>\r\n+\r\n   )\r\n }\r\n \r\n export default success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662742737355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n function success(props) {\r\n   return (\r\n     <div>{props.info}\r\n+    but\r\n     </div>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662742743269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function success(props) {\r\n   return (\r\n     <div>{props.info}\r\n-    but\r\n+    <butt\r\n     </div>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662742751661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function success(props) {\r\n   return (\r\n     <div>{props.info}\r\n-    <butt\r\n+    <button>OK</button>\r\n     </div>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662742870409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-function success(props) {\r\n+function Success(props) {\r\n   return (\r\n     <div>{props.info}\r\n     <button>OK</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1662743005258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import React from 'react'\r\n \r\n function Success(props) {\r\n   return (\r\n-    <div>{props.info}\r\n+    <div cl>{props.info}\r\n     <button>OK</button>\r\n     </div>\r\n \r\n   )\r\n }\r\n \r\n\\ No newline at end of file\n-export default success\n+export default Success\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662743012390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Success(props) {\r\n   return (\r\n-    <div cl>{props.info}\r\n+    <div className='success'>{props.info}\r\n     <button>OK</button>\r\n     </div>\r\n \r\n   )\r\n"
+                },
+                {
+                    "date": 1662743019614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n-    <button>OK</button>\r\n+    <button className=''>OK</button>\r\n     </div>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662743025918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n-    <button className=''>OK</button>\r\n+    <button className='success-btn'>OK</button>\r\n     </div>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662809130786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\r\n \r\n+\r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n     <button className='success-btn'>OK</button>\r\n"
+                },
+                {
+                    "date": 1662809138886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n+import tick from \r\n \r\n-\r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n     <button className='success-btn'>OK</button>\r\n"
+                },
+                {
+                    "date": 1662809146027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import tick from \r\n+import tick from \"\"\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662809169619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import tick from \"\"\r\n+import tick from \"/\"\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662809177842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import tick from \"/\"\r\n+import tick from \"/check-mark\"\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662809183966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import tick from \"/check-mark\"\r\n+import tick from \"/check-mark.png\"\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662809193130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import tick from \"/check-mark.png\"\r\n+import tick from \"/check-mark.\"\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                },
+                {
+                    "date": 1662809234041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n-import tick from \"/check-mark.\"\r\n \r\n+\r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n     <button className='success-btn'>OK</button>\r\n"
+                },
+                {
+                    "date": 1662809255025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import \r\n+import c\r\n \r\n function Success(props) {\r\n   return (\r\n     <div className='success'>{props.info}\r\n"
+                }
+            ],
+            "date": 1662742689641,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction success() {\r\n  return (\r\n    <div>success</div>\r\n  )\r\n}\r\n\r\nexport default success"
+        }
+    ]
+}

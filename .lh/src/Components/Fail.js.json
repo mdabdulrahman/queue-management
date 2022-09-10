@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/Components/Fail.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1662808507046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662808533983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n function Fail() {\r\n   return (\r\n-    <div>Fail</div>\r\n+    <div className='success'>{props.info}\r\n+    <button className='success-btn'>OK</button>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Fail\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662808541266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Fail() {\r\n   return (\r\n-    <div className='success'>{props.info}\r\n+    <div className=''>{props.info}\r\n     <button className='success-btn'>OK</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662808554640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n \r\n function Fail() {\r\n   return (\r\n-    <div className=''>{props.info}\r\n-    <button className='success-btn'>OK</button>\r\n+    <div className='fail'>{props.info}\r\n+    <button className='fail-btn'>OK</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662808722314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-function Fail() {\r\n+function Fail(props) {\r\n   return (\r\n     <div className='fail'>{props.info}\r\n     <button className='fail-btn'>OK</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1662809634391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from 'react'\r\n+\r\n+function Fail(props) {\r\n+  return (\r\n+    <div className='fail'>\r\n+        \r\n+        {props.info}\r\n+    <button className='fail-btn'>OK</button>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Fail\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662809642313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-\r\n+imp\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n         \r\n@@ -9,16 +9,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Fail\n-import React from 'react'\r\n-\r\n-function Fail(props) {\r\n-  return (\r\n-    <div className='fail'>{props.info}\r\n-    <button className='fail-btn'>OK</button>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Fail\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662809651002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-imp\r\n+import cross from \"\"\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n         \r\n"
+                },
+                {
+                    "date": 1662809657719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import cross from \"\"\r\n+import cross from \"./cross\"\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n         \r\n"
+                },
+                {
+                    "date": 1662809696650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n-import cross from \"./cross\"\r\n+import cross from \"./cross.png\"\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n-        \r\n+        <div className='flex justify-center'>  <img className='w-12' src={tick}></img></div>  \r\n         {props.info}\r\n     <button className='fail-btn'>OK</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662809708361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import cross from \"./cross.png\"\r\n function Fail(props) {\r\n   return (\r\n     <div className='fail'>\r\n-        <div className='flex justify-center'>  <img className='w-12' src={tick}></img></div>  \r\n+        <div className='flex justify-center'>  <img className='w-12' src={cross}></img></div>  \r\n         {props.info}\r\n     <button className='fail-btn'>OK</button>\r\n     </div>\r\n   )\r\n"
+                }
+            ],
+            "date": 1662808507046,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Fail() {\r\n  return (\r\n    <div>Fail</div>\r\n  )\r\n}\r\n\r\nexport default Fail"
+        }
+    ]
+}

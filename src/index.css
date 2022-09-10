@@ -71,4 +71,16 @@ legend{
     .inner-form{
         @apply flex-col gap-3 pb-2
     }
+    .success{
+        @apply grid gap-4 w-5/6 border-green-500 border-2 mx-auto my-6 p-2 rounded bg-green-200 text-green-800
+    }
+    .success-btn{
+@apply bg-green-500 rounded text-white
+    }
+    .fail{
+        @apply grid gap-4 w-5/6 border-red-500 border-2 mx-auto my-6 p-2 rounded bg-red-200 text-red-800
+    }
+    .fail-btn{
+@apply bg-red-500 rounded text-white
+    }
 }

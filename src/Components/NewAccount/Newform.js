@@ -1,10 +1,13 @@
 import dbfirestore from '../firebase/DatabaseStore'
-import React, { useRef } from 'react'
+import React, { useRef,useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { doc, setDoc , collection, addDoc} from "firebase/firestore"; 
+import Form from './Form';
+import Success from '../Success';
+import Fail from '../Fail';
 
 function Newform() {
-
+const [Status,setStatus]=useState(null)
     /* Sending email to new account */
     emailjs.init("nsIPDphWPHf1B2KaP")
 let NewAccountMail=(obj)=>{
@@ -14,19 +17,23 @@ emailjs.send('service_vm00no9', 'template_khsc83l',obj, 'nsIPDphWPHf1B2KaP')
 }, (error) => {
     console.log(error.text);
 });}
-
+const [ApplicationNo,setApplicationNo]=useState("")
 /* Adding to firestore */
 let add=()=>{
   
     try {
         let aplno=String(values().aplno)
+
         const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values());
         alert("Your Application has been sent :"+values().email)
 NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})
- 
+setApplicationNo(aplno) 
+
+setStatus(true)
       
       } catch (e) {
         console.error("Error adding document: ", e);
+        setStatus(false)
       }
      
 }
@@ -58,44 +65,16 @@ NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.
         district:district.current.value
 
    }}
+   if (Status==null){
   return (
-    <div >
-   
-        <div >
-            <fieldset className='form'>
-                <legend >
-<h1 className='text-center text-lg py-3'>Regiter for New Buisnness Account</h1>
-    <h1 className='text-sm text-center'>To Manage Queue in your Shop</h1>
-    </legend>
-<div className='inner-form'>
-        <label>Buisness Name : </label>
-        <input type="text" name="bname" ref={bname}  className='form-control' required></input>
-        <label>Buisness Type :</label>
-    <input type="text" className='form-control' ref={btype} name="btype"></input>
-   <label>Owner Name :</label>
-   <input type="text" className='form-control' ref={Oname} name="Oname"></input>
-   <label>Email Id :</label>
-   <input type="email" className='form-control' ref={email}  name="email"></input>
-   <label>Phone Number :</label>
-   <input type="text" className='form-control'  ref={number} name="number"></input>
-   <label>Address of Shop :</label>
-   <textarea type="text" className='h-3/4 form-control' ref={adrs}  name="adrs"></textarea>
-   
-   <label>Google Map location link : </label>
-   <input type="url" name="gurl" ref={gurl} className='form-control '></input>
-    <label>Country :</label>
-    <input type="text" className='form-control' ref={country} name="country"></input>
-    <label>State :</label>
-    <input type="text" className='form-control' ref={state} name="state"></input>
-    <label>District :</label>
-    <input type="text" className='form-control' ref={district} name="district"></input>
-    <button className='btn-secondary ' onClick={()=>{add()}}>Register</button>
-    </div>
-    </fieldset>
-    </div>
-    {/* <div className='  h-screen'><img src={pic} className="w-full h-full "></img></div>
-     */}
-</div>  )
+<Form bname={bname} btype={btype} Oname={Oname} email={email} number={number} adrs={adrs} gurl={gurl} country={country} district={district} state={state} add={add}/>
+    )}
+    else if (Status==true){
+        return(<Success info={`Your Application has been Successfully submited ! Your Application NO : ${ApplicationNo} and Your Application will be reviwed in 24 hrs .Status will be shared via Mail`}/>)
+    }
+    else{
+        return(<Fail info={`There was an problem in applying ,Please try again or report this issue to us via email : queuesystem2022@gmail.com`}/>)
+    }
 }
 
 export default Newform
