@@ -39,6 +39,17 @@ setStatus(true)
 
 let validate=()=>{
 console.log(number.current.validity.valid);
+if (bname.current.value!=""&&btype.current.value!=""&&Oname.current.value!=""&&email.current.value!=""&&number.current.validity.valid&&adrs.current.value!=""&&gurl.current.value!=""&&country.current.value!=""&&state.current.value!=""&&city.current.value!=""){
+add()
+}
+else{
+    let val=[bname.current,number.current,btype.current,Oname.current,email.current,adrs.current,gurl.current,state.current,city.current,country.current]
+    val.map((g)=>g.classList.remove("wrongInput"))
+    let filtered=val.filter((v)=>v.value=="")
+    /* let numVald=()=>{number.current.validity.valid==false?number.current.classList.add("wrongInput"):console.log("wrong")} */
+    filtered.map((g)=>g.classList.add("wrongInput"))
+    window.scroll(0,0)
+}
 }
 
     const bname=useRef("")
