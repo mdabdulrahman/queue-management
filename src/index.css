@@ -86,7 +86,7 @@ legend{
         @apply mx-2 text-sm
     }
     .form{
-        @apply w-5/6
+        @apply  w-5/6
     }
     .inner-form{
         @apply flex-col gap-3 pb-2 grid-cols-none
@@ -106,11 +106,11 @@ legend{
     
     
 }
-@media only screen and (max-width:800px){
+/* @media only screen and (max-width:800px){
 .form{
     @apply w-2/4
 }
 .inner-form{
     @apply grid-cols-none flex-col 
 }
-}
+} */
