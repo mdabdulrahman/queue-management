@@ -1,12 +1,15 @@
 import dbfirestore from '../firebase/DatabaseStore'
-import React, { useRef,useState } from 'react'
+import React, { useRef,useState,useEffect } from 'react'
 import emailjs from '@emailjs/browser';
 import { doc, setDoc , collection, addDoc} from "firebase/firestore"; 
 import Form from './Form';
 import Success from '../Success';
 import Fail from '../Fail';
+import {useNavigate} from "react-router-dom"
+
 
 function Newform() {
+    const navigate = useNavigate();
 const [Status,setStatus]=useState(null)
     /* Sending email to new account */
     emailjs.init("nsIPDphWPHf1B2KaP")
@@ -23,7 +26,7 @@ let add=()=>{
   
     try {
         let aplno=String(values().aplno)
-
+          
         const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values());
        
 NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})
@@ -36,15 +39,30 @@ setStatus(true)
       }
      
 }
+let scountry=(val)=>{
+    if (val!=null){
+setcountry(val)}
+return country
+}
+let scity=(val)=>{
+    if (val!=null){
+setCity(val)}
+return city
+}
+let sstate=(val)=>{
+    if (val!=null){
+setState(val)}
+return state
+}
 
 let validate=()=>{
 console.log(number.current.validity.valid);
-if (bname.current.value!=""&&btype.current.value!=""&&Oname.current.value!=""&&email.current.value!=""&&number.current.validity.valid&&adrs.current.value!=""&&gurl.current.value!=""&&country.current.value!=""&&state.current.value!=""&&city.current.value!=""){
+if (number.current.value!=""&&bname.current.value!=""&&btype.current.value!=""&&Oname.current.value!=""&&email.current.value!=""&&number.current.validity.valid&&adrs.current.value!=""&&gurl.current.value!=""&&country!=""&&state!=""&&city!=""){
 add()
 }
 else{
-    let val=[bname.current,number.current,btype.current,Oname.current,email.current,adrs.current,gurl.current,state.current,city.current,country.current]
-    val.map((g)=>g.classList.remove("wrongInput"))
+    let val=[bname.current,number.current,btype.current,Oname.current,email.current,adrs.current,gurl.current,state,city,country]
+   try{ val.map((g)=>g.classList.remove("wrongInput"))}catch(e){}
     let filtered=val.filter((v)=>v.value=="")
     /* let numVald=()=>{number.current.validity.valid==false?number.current.classList.add("wrongInput"):console.log("wrong")} */
     filtered.map((g)=>g.classList.add("wrongInput"))
@@ -59,9 +77,9 @@ else{
     const number=useRef("")
     const     adrs=useRef("")
     const    gurl=useRef("")
-    const  country=useRef("")
-    const    state=useRef("")
-    const city=useRef("")
+    const [country, setcountry] = useState("");
+const [state, setState] = useState("");
+    const [city,setCity]=useState("")
 
    let values=()=>{return {
         aplno:Math.ceil(Math.random()*10000000000),
@@ -72,14 +90,15 @@ else{
         number:number.current.value,
         adrs:adrs.current.value,
         gurl:gurl.current.value,
-        country:country.current.value,
-        state:state.current.value,
-        city:city.current.value
+        country:country,
+        state:state,
+        city:city
 
    }}
+  
    if (Status==null){
   return (
-<Form bname={bname} btype={btype} Oname={Oname} email={email} number={number} adrs={adrs} gurl={gurl} country={country} city={city} state={state} add={validate}/>
+<Form bname={bname} btype={btype} Oname={Oname} email={email} number={number} adrs={adrs} gurl={gurl} country={scountry} city={scity} state={sstate} add={validate}/>
     )}
     else if (Status==true){
         return(<Success info={`Your Application has been Successfully submited ! Your Application NO : ${ApplicationNo} and Your Application will be reviwed in 24 hrs .Status will be shared via Mail`}/>)

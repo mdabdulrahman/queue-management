@@ -2,6 +2,7 @@ import React from 'react'
 import NewAccbtn from './NewAccbtn';
 import SignInbtn from './SignInbtn'
 
+
 function Header(props) {
 let btn1;
 let btn2

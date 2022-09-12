@@ -1,20 +1,19 @@
 import LandingPage from './LandingPage';
 import './index.css';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 import NewAccount from './NewAccount';
+import Success from './Components/Success';
 
 function App() {
-  let page;
-  if (window.location.pathname==="/"){
-    page=<LandingPage/>
-  }
-  else if(window.location.pathname==="/NewAccount"){
-    page=<NewAccount/>
-  }
-  return (
-    <div className='App'>
-  {page}
-  </div>
-  );
+return(
+ <BrowserRouter>
+ <Routes>
+  <Route exact path='/' element={<LandingPage/>}/>
+  <Route exact path='/NewAccount' element={<NewAccount/>}/>
+ 
+ </Routes>
+ </BrowserRouter>
+)
   
 }
 

@@ -33,7 +33,7 @@
 @apply primary-bg secondary-text
 }
 .btn-secondary{
-    @apply primary-bg secondary-text p-2 text-sm rounded
+    @apply primary-bg  secondary-text p-2 text-sm rounded
 }
 .btn-secondary:hover{
     @apply ring ring-2 ring-zinc-800 ring-offset-1 ring-offset-zinc-100
@@ -42,19 +42,37 @@
 @apply secondary-bg primary-text
 }
 .form{
-    @apply container px-6 h-full shadow rounded secondary-bg w-3/6 my-3  mx-auto
+    @apply container px-6 h-full shadow rounded secondary-bg w-[60%] my-3  mx-auto
 }
 legend{
-    @apply primary-bg secondary-text px-3 py-1 shadow-lg rounded mb-6 mx-auto
+    @apply primary-bg border-2 secondary-text px-3 py-1 shadow-lg rounded mb-6 mx-auto
 }
 .form-control{
-    @apply appearance-none  border-zinc-200 rounded py-2 px-3 w-full leading-tight focus:outline-none 
+    @apply appearance-none border-gray-500 col-span-2 rounded py-2 px-3 w-full leading-tight focus:outline-none 
+}
+.form-control:focus{
+    @apply ring-zinc-800 ring-1 ring-offset-0 ring-offset-zinc-800 border-none
+}
+.greenBorder{
+    @apply border-green-500 border
 }
 .inner-form{
-    @apply flex 
+    @apply grid grid-cols-6 gap-6
 }
 .wrongInput{
     @apply border-red-400  border ring ring-1 ring-red-500  ring-offset-red-200
+}
+.success{
+    @apply grid gap-4 px-4 w-2/4 border-green-500 border-2 mx-auto my-6 p-2 rounded bg-green-200 text-green-800
+}
+.success-btn{
+@apply bg-green-500 px-16 shadow-md mx-auto rounded text-white
+}
+.fail{
+    @apply grid gap-4 px-4 w-2/4 border-red-500 border-2 mx-auto my-6 p-2 rounded bg-red-200 text-red-800
+}
+.fail-btn{
+@apply bg-red-500 px-16 shadow-md mx-auto rounded text-white
 }
 @media only screen and (max-width:600px) {
     .wrap{
@@ -71,7 +89,7 @@ legend{
         @apply w-5/6
     }
     .inner-form{
-        @apply flex-col gap-3 pb-2
+        @apply flex-col gap-3 pb-2 grid-cols-none
     }
     .success{
         @apply grid gap-4 w-5/6 border-green-500 border-2 mx-auto my-6 p-2 rounded bg-green-200 text-green-800
@@ -87,4 +105,12 @@ legend{
     }
     
     
+}
+@media only screen and (max-width:800px){
+.form{
+    @apply w-2/4
+}
+.inner-form{
+    @apply grid-cols-none flex-col 
+}
 }

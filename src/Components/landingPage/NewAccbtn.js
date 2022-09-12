@@ -1,8 +1,11 @@
 import React from 'react'
-
+import {useNavigate} from "react-router-dom"
 function NewAccbtn() {
+ 
+    const navigate = useNavigate();
+    
   return (
-    <div><button className='btn-primary' onClick={()=>window.location.pathname="/NewAccount"}>Create Account</button></div>
+    <div><button className='btn-primary' onClick={()=>navigate("/NewAccount")}>Create Account</button></div>
   )
 }
 
