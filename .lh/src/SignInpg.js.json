@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/SignInpg.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1663000493127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663000503959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n+      <\r\n         <SignIn/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663000511766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import React from 'react'\r\n+import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n-      <\r\n+      <Header\r\n         <SignIn/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663000553085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n-      <Header\r\n+      <Header btn=\r\n         <SignIn/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663000558762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n-      <Header btn=\r\n+      <Header btn=\"create\"\r\n         <SignIn/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663070173012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n-      <Header btn=\"create\"\r\n-        <SignIn/>\r\n+      <Header btn=\"create\"/>\r\n+        <SignIn sign/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663070178539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function SignInpg() {\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n-        <SignIn sign/>\r\n+        <SignIn signin={}/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663070185387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function SignInpg() {\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n-        <SignIn signin={}/>\r\n+        <SignIn signin={signin}/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663070265498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import React from 'react'\r\n+import Header from './Components/Header'\r\n+import SignIn from './Components/signIn/SignIn'\r\n+\r\n+function SignInpg() {\r\n+  signin(auth,email,password){\r\n+    console.log(email)\r\n+    signInWithEmailAndPassword(auth, email, password)\r\n+.then((userCredential) => {\r\n+// Signed in \r\n+const user = userCredential.user;\r\n+// ...\r\n+})\r\n+.catch((error) => {\r\n+const errorCode = error.code;\r\n+const errorMessage = error.message;\r\n+});\r\n+  return (\r\n+    <div>\r\n+      <Header btn=\"create\"/>\r\n+        <SignIn signin={signin}/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default SignInpg\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663070279430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,28 +13,14 @@\n })\r\n .catch((error) => {\r\n const errorCode = error.code;\r\n const errorMessage = error.message;\r\n-});\r\n+});}\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n         <SignIn signin={signin}/>\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default SignInpg\n-import React from 'react'\r\n-import Header from './Components/Header'\r\n-import SignIn from './Components/signIn/SignIn'\r\n-\r\n-function SignInpg() {\r\n-  return (\r\n-    <div>\r\n-      <Header btn=\"create\"/>\r\n-        <SignIn signin={signin}/>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default SignInpg\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663070314632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n \r\n function SignInpg() {\r\n-  signin(auth,email,password){\r\n+  signin (auth,email,password){\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n .then((userCredential) => {\r\n // Signed in \r\n"
+                },
+                {
+                    "date": 1663070322517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n \r\n function SignInpg() {\r\n-  signin (auth,email,password){\r\n+  signin=(auth,email,password){\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n .then((userCredential) => {\r\n // Signed in \r\n"
+                },
+                {
+                    "date": 1663070327948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n \r\n function SignInpg() {\r\n-  signin=(auth,email,password){\r\n+  signin=(auth,email,password)=>{\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n .then((userCredential) => {\r\n // Signed in \r\n"
+                },
+                {
+                    "date": 1663070410291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n });}\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n-        <SignIn signin={signin}/>\r\n+        <SignIn signin={signin()}/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663070418431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n });}\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n-        <SignIn signin={signin()}/>\r\n+        <SignIn signin={signin}/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663070429080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n \r\n function SignInpg() {\r\n-  signin=(auth,email,password)=>{\r\n+  let signin=(auth,email,password)=>{\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n .then((userCredential) => {\r\n // Signed in \r\n"
+                },
+                {
+                    "date": 1663070463738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n import SignIn from './Components/signIn/SignIn'\r\n-\r\n+import { getAuth,signInWithEmailAndPassword } from \"firebase/auth\";\r\n function SignInpg() {\r\n   let signin=(auth,email,password)=>{\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n"
+                },
+                {
+                    "date": 1663070542153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n })\r\n .catch((error) => {\r\n const errorCode = error.code;\r\n const errorMessage = error.message;\r\n+co\r\n });}\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n"
+                },
+                {
+                    "date": 1663070549134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n })\r\n .catch((error) => {\r\n const errorCode = error.code;\r\n const errorMessage = error.message;\r\n-console.l\r\n+console.lo\r\n });}\r\n   return (\r\n     <div>\r\n       <Header btn=\"create\"/>\r\n"
+                },
+                {
+                    "date": 1663070665553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import SignIn from './Components/signIn/SignIn'\r\n import app from '../firebase/connect';\r\n import { getAuth,signInWithEmailAndPassword } from \"firebase/auth\";\r\n function SignInpg() {\r\n-  \r\n+  c\r\n   let signin=(auth,email,password)=>{\r\n     console.log(email)\r\n     signInWithEmailAndPassword(auth, email, password)\r\n .then((userCredential) => {\r\n"
+                }
+            ],
+            "date": 1663000493127,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport SignIn from './Components/signIn/SignIn'\r\n\r\nfunction SignInpg() {\r\n  return (\r\n    <div>\r\n        <SignIn/>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SignInpg"
+        }
+    ]
+}

@@ -3,6 +3,8 @@ import './index.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import NewAccount from './NewAccount';
 import Success from './Components/Success';
+import SignInpg from './SignInpg';
+import Admin from './Admin';
 
 function App() {
 return(
@@ -10,7 +12,8 @@ return(
  <Routes>
   <Route exact path='/' element={<LandingPage/>}/>
   <Route exact path='/NewAccount' element={<NewAccount/>}/>
- 
+ <Route exact path='/signin' element={<SignInpg/>}/>
+ <Route exact path='/admin' element={<Admin/>}/>
  </Routes>
  </BrowserRouter>
 )

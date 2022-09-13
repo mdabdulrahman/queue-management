@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/Components/Header.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1662999614466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662999630092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import NewAccbtn from './landingPage/NewAccbtn';\r\n+import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './landingPage/SignInbtn'\r\n \r\n \r\n function Header(props) {\r\n"
+                },
+                {
+                    "date": 1663072286011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,43 @@\n+import React from 'react'\r\n+import NewAccbtn from './NewAccbtn';\r\n+import SignInbtn from './SignInbtn'\r\n+\r\n+\r\n+function Header(props) {\r\n+let btn1;\r\n+let btn2\r\n+if (props.btn==\"signIn\"){\r\n+  btn1=<SignInbtn/>\r\n+}\r\n+else if (props.btn==\"create\"){\r\n+  btn1=<NewAccbtn/>\r\n+}\r\n+else if(props.btn==\"\"){\r\n+  btn1=<SignInbtn/>\r\n+  btn2=<NewAccbtn/>\r\n+  \r\n+}\r\n+else{\r\n+  \r\n+}\r\n+\r\n+  return (\r\n+    <div className='header'>\r\n+   <div className='wrap font-black'>\r\n+    Queue System\r\n+   </div>\r\n+   <div className='flex'>\r\n+   <div className='wrap'>\r\n+    {btn1}\r\n+   \r\n+   </div>\r\n+   <div className='wrap'>\r\n+    {btn2}\r\n+   \r\n+   </div>\r\n+    </div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Header\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663072293691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,52 +16,10 @@\n   btn1=<SignInbtn/>\r\n   btn2=<NewAccbtn/>\r\n   \r\n }\r\n-else{\r\n-  \r\n-}\r\n \r\n-  return (\r\n-    <div className='header'>\r\n-   <div className='wrap font-black'>\r\n-    Queue System\r\n-   </div>\r\n-   <div className='flex'>\r\n-   <div className='wrap'>\r\n-    {btn1}\r\n-   \r\n-   </div>\r\n-   <div className='wrap'>\r\n-    {btn2}\r\n-   \r\n-   </div>\r\n-    </div>\r\n-    </div>\r\n-  )\r\n-}\r\n \r\n-export default Header\n-import React from 'react'\r\n-import NewAccbtn from './NewAccbtn';\r\n-import SignInbtn from './landingPage/SignInbtn'\r\n-\r\n-\r\n-function Header(props) {\r\n-let btn1;\r\n-let btn2\r\n-if (props.btn==\"signIn\"){\r\n-  btn1=<SignInbtn/>\r\n-}\r\n-else if (props.btn==\"create\"){\r\n-  btn1=<NewAccbtn/>\r\n-}\r\n-else if(props.btn==\"\"){\r\n-  btn1=<SignInbtn/>\r\n-  btn2=<NewAccbtn/>\r\n-  \r\n-}\r\n-\r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap font-black'>\r\n     Queue System\r\n"
+                }
+            ],
+            "date": 1662999614466,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport NewAccbtn from './landingPage/NewAccbtn';\r\nimport SignInbtn from './landingPage/SignInbtn'\r\n\r\n\r\nfunction Header(props) {\r\nlet btn1;\r\nlet btn2\r\nif (props.btn==\"signIn\"){\r\n  btn1=<SignInbtn/>\r\n}\r\nelse if (props.btn==\"create\"){\r\n  btn1=<NewAccbtn/>\r\n}\r\nelse if(props.btn==\"\"){\r\n  btn1=<SignInbtn/>\r\n  btn2=<NewAccbtn/>\r\n  \r\n}\r\n\r\n  return (\r\n    <div className='header'>\r\n   <div className='wrap font-black'>\r\n    Queue System\r\n   </div>\r\n   <div className='flex'>\r\n   <div className='wrap'>\r\n    {btn1}\r\n   \r\n   </div>\r\n   <div className='wrap'>\r\n    {btn2}\r\n   \r\n   </div>\r\n    </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Header"
+        }
+    ]
+}

@@ -18,6 +18,7 @@ else if(props.btn==""){
   
 }
 
+
   return (
     <div className='header'>
    <div className='wrap font-black'>

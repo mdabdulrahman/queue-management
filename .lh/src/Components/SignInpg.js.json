@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Components/SignInpg.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1663000133847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663000140466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n function SignInpg() {\r\n   return (\r\n-    <div>SignInpg</div>\r\n+    <div>\r\n+        \r\n+    </div>\r\n   )\r\n }\r\n \r\n export default SignInpg\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663000146392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react'\r\n+import SignIn from './signIn/SignIn'\r\n \r\n function SignInpg() {\r\n   return (\r\n     <div>\r\n-        \r\n+        <SignIn\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1663000133847,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction SignInpg() {\r\n  return (\r\n    <div>SignInpg</div>\r\n  )\r\n}\r\n\r\nexport default SignInpg"
+        }
+    ]
+}

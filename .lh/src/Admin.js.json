@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/Admin.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1663071691614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663071697551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-rcfe\r\n+rcf\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663072226287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from 'react'\r\n+\r\n+export default function Admin() {\r\n+  return (\r\n+    <div>\r\n+        <\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1663072233001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <\r\n+        <Header/>\r\n     </div>\r\n   )\r\n }\r\n\\ No newline at end of file\n-rcf\n"
+                },
+                {
+                    "date": 1663072239179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <Header/>\r\n+        <Header />\r\n     </div>\r\n   )\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1663072245004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <Header />\r\n+        <Header btn=\"/>\r\n     </div>\r\n   )\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1663072256658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n+import \r\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"/>\r\n+        <Header btn=\"\"/>\r\n     </div>\r\n\\ No newline at end of file\n   )\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1663072302708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n-import \r\n+import Header from './Components/Header'\r\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"\"/>\r\n+        <Header btn=null/>\r\n     </div>\r\n\\ No newline at end of file\n   )\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1663072310820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \r\n export default function Admin() {\r\n   return (\r\n     <div>\r\n-        <Header btn=null/>\r\n+        <Header btn={null}/>\r\n     </div>\r\n   )\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1663072316953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n     <div>\r\n         <Header btn={null}/>\r\n     </div>\r\n   )\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1663072324807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n export default function Admin() {\r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n+        \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663072359273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n export default function Admin() {\r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n-        \r\n+        {}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663072366471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n export default function Admin() {\r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n-        {}\r\n+        {req}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663072377057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n \r\n export default function Admin() {\r\n+    \r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n-        {req}\r\n+        {request}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663072383689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n \r\n export default function Admin() {\r\n-    \r\n+    let request=\r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n         {request}\r\n"
+                },
+                {
+                    "date": 1663072542843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n \r\n export default function Admin() {\r\n-    let request=\r\n+    \r\n+    let request=()=>{\r\n+\r\n+    }\r\n   return (\r\n     <div>\r\n         <Header btn={null}/>\r\n         {request}\r\n"
+                },
+                {
+                    "date": 1663072735613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n+import { doc, onSnapshot } from \"firebase/firestore\";\r\n+export default function Admin() {\r\n \r\n-export default function Admin() {\r\n-    \r\n     let request=()=>{\r\n \r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1663072755343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n import { doc, onSnapshot } from \"firebase/firestore\";\r\n export default function Admin() {\r\n-\r\n+    const unsub = onSnapshot(doc(db, \"cities\", \"SF\"), (doc) => {\r\n+        console.log(\"Current data: \", doc.data());\r\n+    });\r\n+    \r\n     let request=()=>{\r\n \r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1663072768836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n import { doc, onSnapshot } from \"firebase/firestore\";\r\n export default function Admin() {\r\n-    const unsub = onSnapshot(doc(db, \"), (doc) => {\r\n+    const unsub = onSnapshot(doc(db, \"N), (doc) => {\r\n         console.log(\"Current data: \", doc.data());\r\n     });\r\n     \r\n     let request=()=>{\r\n"
+                },
+                {
+                    "date": 1663072786154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n-\r\n+i\r\n import { doc, onSnapshot } from \"firebase/firestore\";\r\n export default function Admin() {\r\n     const unsub = onSnapshot(doc(db, \"NewAccount\"), (doc) => {\r\n         console.log(\"Current data: \", doc.data());\r\n"
+                }
+            ],
+            "date": 1663071691613,
+            "name": "Commit-0",
+            "content": "rcfe\r\n"
+        }
+    ]
+}

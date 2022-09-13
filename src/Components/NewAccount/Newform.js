@@ -92,7 +92,8 @@ const [state, setState] = useState("");
         gurl:gurl.current.value,
         country:country,
         state:state,
-        city:city
+        city:city,
+        status:null
 
    }}
   

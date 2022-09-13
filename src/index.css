@@ -74,6 +74,9 @@ legend{
 .fail-btn{
 @apply bg-red-500 px-16 shadow-md mx-auto rounded text-white
 }
+.noview{
+    @apply w-3/4 flex justify-between p-6 mx-auto items-center shadow rounded my-6
+}
 @media only screen and (max-width:600px) {
     .wrap{
         @apply mx-2 text-justify

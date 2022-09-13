@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/Components/SignInbtn.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1663000230808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663000236951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function SignInbtn() {\r\n   return (\r\n-    <div><button className='btn-primary' on>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663000247152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function SignInbtn() {\r\n   return (\r\n-    <div><button className='btn-primary' onClick={}>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={navigate}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663000252741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function SignInbtn() {\r\n   return (\r\n-    <div><button className='btn-primary' onClick={navigate}>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={navigate(\"/sign\")}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663000264745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n-\r\n+import useN\r\n function SignInbtn() {\r\n   return (\r\n-    <div><button className='btn-primary' onClick={navigate(\"/sign\")}>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={navigate(\"/signin\")}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663000273463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\r\n-import useN\r\n+import { useNavigate } from 'react-router-dom'\r\n function SignInbtn() {\r\n+  cons\r\n   return (\r\n     <div><button className='btn-primary' onClick={navigate(\"/signin\")}>Sign In</button></div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663000281889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import { useNavigate } from 'react-router-dom'\r\n function SignInbtn() {\r\n-  cons\r\n+  const navigate=use\r\n   return (\r\n     <div><button className='btn-primary' onClick={navigate(\"/signin\")}>Sign In</button></div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663000418968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useNavigate } from 'react-router-dom'\r\n function SignInbtn() {\r\n   const navigate=useNavigate()\r\n   return (\r\n-    <div><button className='btn-primary' onClick={()navigate(\"/signin\")}>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={()=navigate(\"/signin\")}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1663000230808,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction SignInbtn() {\r\n  return (\r\n    <div><button className='btn-primary' on>Sign In</button></div>\r\n  )\r\n}\r\n\r\nexport default SignInbtn"
+        }
+    ]
+}
