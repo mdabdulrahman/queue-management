@@ -80,9 +80,9 @@ else{
     const [country, setcountry] = useState("");
 const [state, setState] = useState("");
     const [city,setCity]=useState("")
-
+const aplnoGenerate=Math.ceil(Math.random()*10000000000)
    let values=()=>{return {
-        aplno:Math.ceil(Math.random()*10000000000),
+        aplno:aplnoGenerate,
         bname:bname.current.value,
         btype:btype.current.value,
         Oname:Oname.current.value,
