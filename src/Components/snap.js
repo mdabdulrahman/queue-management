@@ -7,13 +7,21 @@ const useAdminfirestore=()=>{
 const unsub = onSnapshot(
     collection(dbfirestore, "NewAccount"), 
     (snapshot) => {
-    
+        unsub()
+  
+    if(r!=[]){
+       
 setr(snapshot.docs.map((doc)=>{return doc.data()}))
-
+    }
+unsub()
 },
     (error) => {
       // ...
     });
+
+
+   
+
 return r
 }
     export default useAdminfirestore

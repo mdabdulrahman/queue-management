@@ -2,14 +2,23 @@ import React from 'react'
 import {startTransition} from 'react';
 import { useState,useEffect } from 'react';
 import Header from './Components/Header'
-import useAdminfirestore from './Components/snap';
-import dbfirestore from './Components/firebase/DatabaseStore';
-import { doc, onSnapshot,collection } from "firebase/firestore";
+import { get,child,ref} from "firebase/database";
+import db from "./Components/firebase/db.js"
 export default function Admin() {
-    const datas = useAdminfirestore()
+   
+   const [datas, setdatas] = useState([]);
     const [view, setview] = useState(false)
     const [request, setrequest] = useState("")
-   
+    get(child(ref(db), `NewAccount`)).then((snapshot) => {
+      if (snapshot.exists()) {
+setdatas(Object.keys(snapshot.val()).map(key=>snapshot.val()[key]))
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+    
     let noview=(obj)=>{
       return (<div key={obj.aplno} className="noview">
         <h1>Type : {obj.btype}</h1>

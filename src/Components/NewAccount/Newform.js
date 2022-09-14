@@ -6,8 +6,8 @@ import Form from './Form';
 import Success from '../Success';
 import Fail from '../Fail';
 import {useNavigate} from "react-router-dom"
-
-
+import { getDatabase, ref as sRef, set } from "firebase/database";
+import db from "../firebase/db"
 function Newform() {
     const navigate = useNavigate();
 const [Status,setStatus]=useState(null)
@@ -20,14 +20,19 @@ emailjs.send('service_vm00no9', 'template_khsc83l',obj, 'nsIPDphWPHf1B2KaP')
 }, (error) => {
     console.log(error.text);
 });}
+
 const [ApplicationNo,setApplicationNo]=useState("")
+
+    
+  
 /* Adding to firestore */
 let add=()=>{
   
     try {
         let aplno=String(values().aplno)
-          
-        const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values());
+        set(sRef(db, 'NewAccount/' + aplno), values());
+       /*  const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values()); */
+
        
 NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})
 setApplicationNo(aplno) 

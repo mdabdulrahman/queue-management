@@ -1,0 +1,198 @@
+{
+    "sourceFile": "src/Components/snap.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1663161624177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663161683677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import dbfirestore from './firebase/DatabaseStore';\r\n import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n import react from \"react\"\r\n import { useState } from 'react';\r\n-const useAdminfirestore=()=>{\r\n+const useAdminfirestore=(sub)=>{\r\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n@@ -13,8 +13,8 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-    uns\r\n+    unsub()\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161689016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n+    if()\r\n     unsub()\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161695256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-    if()\r\n+    if(sub===true)\r\n     unsub()\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161702614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-    if(sub===true)\r\n-    unsub()\r\n+    if(sub===true){\r\n+    unsub()}\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161821596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import dbfirestore from './firebase/DatabaseStore';\r\n+import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n+import react from \"react\"\r\n+import { useState } from 'react';\r\n+const useAdminfirestore=(sub)=>{\r\n+    const [r, setr] = useState([])\r\n+const unsub = onSnapshot(\r\n+    collection(dbfirestore, \"NewAccount\"), \r\n+    (snapshot) => {\r\n+    \r\n+setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n+\r\n+},\r\n+    (error) => {\r\n+      // ...\r\n+    });\r\n+    if(sub===true){\r\n+    unsub()\r\n+}\r\n+return r\r\n+}\r\n+    export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161830011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,29 +15,8 @@\n       // ...\r\n     });\r\n     if(sub===true){\r\n     unsub()\r\n-}\r\n+c}\r\n return r\r\n }\r\n-    export default useAdminfirestore\n-import dbfirestore from './firebase/DatabaseStore';\r\n-import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n-import react from \"react\"\r\n-import { useState } from 'react';\r\n-const useAdminfirestore=(sub)=>{\r\n-    const [r, setr] = useState([])\r\n-const unsub = onSnapshot(\r\n-    collection(dbfirestore, \"NewAccount\"), \r\n-    (snapshot) => {\r\n-    \r\n-setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n-\r\n-},\r\n-    (error) => {\r\n-      // ...\r\n-    });\r\n-    if(sub===true){\r\n-    unsub()}\r\n-return r\r\n-}\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161836178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       // ...\r\n     });\r\n     if(sub===true){\r\n     unsub()\r\n-c}\r\n+console.log}\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161842650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       // ...\r\n     });\r\n     if(sub===true){\r\n     unsub()\r\n-console.log}\r\n+console.log(\"stopped....\")}\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663161994754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n-    \r\n+    console.log(\"start\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n \r\n },\r\n     (error) => {\r\n"
+                },
+                {
+                    "date": 1663162030440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-    if(sub===true){\r\n+   \r\n     unsub()\r\n console.log(\"stopped....\")}\r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162037188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       // ...\r\n     });\r\n    \r\n     unsub()\r\n-console.log(\"stopped....\")}\r\n+\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162086951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n       // ...\r\n     });\r\n    \r\n     unsub()\r\n-\r\n+con\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162123950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import dbfirestore from './firebase/DatabaseStore';\r\n import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n import react from \"react\"\r\n import { useState } from 'react';\r\n-const useAdminfirestore=(sub)=>{\r\n+const useAdminfirestore=()=>{\r\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n@@ -15,8 +15,8 @@\n       // ...\r\n     });\r\n    \r\n     unsub()\r\n-con\r\n+\r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162137717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-   \r\n+   set\r\n     unsub()\r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162145303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-   set\r\n+set\r\n     unsub()\r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162151293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-set\r\n+setTimeout(() => {\r\n+    \r\n+}, timeout);\r\n     unsub()\r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162159447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n setTimeout(() => {\r\n     \r\n-}, timeout);\r\n+}, 3000);\r\n     unsub()\r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162172326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     });\r\n setTimeout(() => {\r\n     \r\n }, 3000);\r\n-    unsub()\r\n+   \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162200540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n     (error) => {\r\n       // ...\r\n     });\r\n setTimeout(() => {\r\n-    \r\n-}, 3000);\r\n+    unsub()\r\n+\r\n    \r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162231799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-setTimeout(() => {\r\n+if (r)\r\n     unsub()\r\n \r\n    \r\n \r\n"
+                },
+                {
+                    "date": 1663162253030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-if (r)\r\n+if (r!=[])\r\n     unsub()\r\n \r\n    \r\n \r\n"
+                },
+                {
+                    "date": 1663162262032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-if (r!=[])\r\n+if (r!=[]){}\r\n     unsub()\r\n \r\n    \r\n \r\n"
+                },
+                {
+                    "date": 1663162267285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-if (r!=[]){}\r\n-    unsub()\r\n+if (r!=[]){\r\n+    unsub()}\r\n \r\n    \r\n \r\n return r\r\n"
+                },
+                {
+                    "date": 1663162323501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n     console.log(\"start\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n-\r\n+if (r!=[]){\r\n+    unsub()}\r\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n"
+                },
+                {
+                    "date": 1663162346763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,15 @@\n     (snapshot) => {\r\n     console.log(\"start\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n if (r!=[]){\r\n-    unsub()}\r\n+    unsub()\r\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n-if (r!=[]){\r\n-    unsub()}\r\n \r\n+\r\n    \r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162363569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,9 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n     console.log(\"start\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n-if (r!=[]){\r\n-    unsub()\r\n+\r\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n"
+                },
+                {
+                    "date": 1663162369065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     (error) => {\r\n       // ...\r\n     });\r\n \r\n-\r\n+unsub()\r\n    \r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162466433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n \r\n unsub()\r\n-   \r\n+ a  \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162472244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n \r\n unsub()\r\n- a  \r\n+ addEve  \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162482202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n \r\n unsub()\r\n- addEve  \r\n+ ad  \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162491164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n \r\n unsub()\r\n- ad  \r\n+ addd  \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162515364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       // ...\r\n     });\r\n \r\n unsub()\r\n- addd  \r\n+   \r\n \r\n return r\r\n }\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663162578357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     (error) => {\r\n       // ...\r\n     });\r\n \r\n-unsub()\r\n+\r\n    \r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162596991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     (error) => {\r\n       // ...\r\n     });\r\n \r\n-\r\n+unsub\r\n    \r\n \r\n return r\r\n }\r\n"
+                },
+                {
+                    "date": 1663162864738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import dbfirestore from './firebase/DatabaseStore';\r\n+import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n+import react from \"react\"\r\n+import { useState } from 'react';\r\n+const useAdminfirestore=()=>{\r\n+    const [r, setr] = useState([])\r\n+const unsub = onSnapshot(\r\n+    collection(dbfirestore, \"NewAccount\"), \r\n+    (snapshot) => {\r\n+    console.log(\"start\");\r\n+setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n+\r\n+},\r\n+    (error) => {\r\n+      // ...\r\n+    });\r\n+\r\n+\r\n+   \r\n+\r\n+return r\r\n+}\r\n+    export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663163004426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,12 @@\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n+        unsub()\r\n     console.log(\"start\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n-\r\n+unsub()\r\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n@@ -19,28 +20,5 @@\n    \r\n \r\n return r\r\n }\r\n-    export default useAdminfirestore\n-import dbfirestore from './firebase/DatabaseStore';\r\n-import { doc, onSnapshot,collection } from \"firebase/firestore\";\r\n-import react from \"react\"\r\n-import { useState } from 'react';\r\n-const useAdminfirestore=()=>{\r\n-    const [r, setr] = useState([])\r\n-const unsub = onSnapshot(\r\n-    collection(dbfirestore, \"NewAccount\"), \r\n-    (snapshot) => {\r\n-    console.log(\"start\");\r\n-setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n-\r\n-},\r\n-    (error) => {\r\n-      // ...\r\n-    });\r\n-\r\n-unsub\r\n-   \r\n-\r\n-return r\r\n-}\r\n     export default useAdminfirestore\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663163161355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n         unsub()\r\n     console.log(\"start\");\r\n+    if\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n unsub()\r\n },\r\n     (error) => {\r\n"
+                },
+                {
+                    "date": 1663163169627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n         unsub()\r\n     console.log(\"start\");\r\n-    if\r\n+    if(r!=[]){}\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n unsub()\r\n },\r\n     (error) => {\r\n"
+                },
+                {
+                    "date": 1663163177024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,11 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n         unsub()\r\n     console.log(\"start\");\r\n-    if(r!=[]){}\r\n+    if(r!=[]){\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n+    }\r\n unsub()\r\n },\r\n     (error) => {\r\n       // ...\r\n"
+                },
+                {
+                    "date": 1663163213712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     (snapshot) => {\r\n         unsub()\r\n     console.log(\"start\");\r\n     if(r!=[]){\r\n+        log\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n     }\r\n unsub()\r\n },\r\n"
+                },
+                {
+                    "date": 1663163246943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n         unsub()\r\n     console.log(\"start\");\r\n-    if(r!=[]){\r\n-        log\r\n+    if(r==[]){\r\n+        console.log(\"r\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n     }\r\n unsub()\r\n },\r\n"
+                },
+                {
+                    "date": 1663163292644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n-        unsub()\r\n+      \r\n     console.log(\"start\");\r\n     if(r==[]){\r\n         console.log(\"r\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n"
+                },
+                {
+                    "date": 1663163338617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     if(r==[]){\r\n         console.log(\"r\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n     }\r\n-unsub()\r\n+\r\n },\r\n     (error) => {\r\n       // ...\r\n     });\r\n"
+                },
+                {
+                    "date": 1663163390755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const [r, setr] = useState([])\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n-      co\r\n+      \r\n     console.log(\"start\");\r\n     if(r==[]){\r\n         console.log(\"r\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n"
+                },
+                {
+                    "date": 1663163506953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     let i=0\r\n const unsub = onSnapshot(\r\n     collection(dbfirestore, \"NewAccount\"), \r\n     (snapshot) => {\r\n-    i=i\r\n+    i=i+\r\n     console.log(\"start\");\r\n     if(i<=10){\r\n         console.log(\"r\");\r\n setr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n"
+                }
+            ],
+            "date": 1663161624177,
+            "name": "Commit-0",
+            "content": "import dbfirestore from './firebase/DatabaseStore';\r\nimport { doc, onSnapshot,collection } from \"firebase/firestore\";\r\nimport react from \"react\"\r\nimport { useState } from 'react';\r\nconst useAdminfirestore=()=>{\r\n    const [r, setr] = useState([])\r\nconst unsub = onSnapshot(\r\n    collection(dbfirestore, \"NewAccount\"), \r\n    (snapshot) => {\r\n    \r\nsetr(snapshot.docs.map((doc)=>{return doc.data()}))\r\n\r\n},\r\n    (error) => {\r\n      // ...\r\n    });\r\n    uns\r\nreturn r\r\n}\r\n    export default useAdminfirestore"
+        }
+    ]
+}

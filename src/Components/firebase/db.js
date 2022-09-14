@@ -2,14 +2,5 @@ import { getDatabase,ref,set,onValue,child,get,update,push } from "firebase/data
 import app from "./connect"
 import React from 'react'
 
-const database=getDatabase(app)
-
-function db() {
-    console.log(database)
-   
-  return (
-    <div></div>
-  )
-}
-
+const db=getDatabase(app)
 export default db
