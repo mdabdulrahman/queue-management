@@ -36,10 +36,10 @@
     @apply primary-bg  secondary-text p-2 text-sm rounded
 }
 .btn-secondary:hover{
-    @apply ring ring-2 ring-zinc-800 ring-offset-1 ring-offset-zinc-100
+    @apply ring ring-2 ring-zinc-300 ring-offset-1 ring-offset-zinc-600
 }
 .btn-seconday:active{
-@apply secondary-bg primary-text
+@apply primary-bg secondary-text
 }
 .form{
     @apply container px-6 h-full shadow rounded secondary-bg w-[60%] my-3  mx-auto
@@ -68,14 +68,23 @@ legend{
 .success-btn{
 @apply bg-green-500 px-16 shadow-md mx-auto rounded text-white
 }
+.success-btn:hover{
+    @apply ring ring-4 ring-green-300 ring-offset-2 ring-offset-green-500
+}
 .fail{
     @apply grid gap-4 px-4 w-2/4 border-red-500 border-2 mx-auto my-6 p-2 rounded bg-red-200 text-red-800
 }
 .fail-btn{
 @apply bg-red-500 px-16 shadow-md mx-auto rounded text-white
 }
+.fail-btn:hover{
+    @apply ring ring-4 ring-red-300 ring-offset-2 ring-offset-red-500
+}
 .noview{
     @apply w-3/4 flex justify-between p-6 mx-auto items-center shadow rounded my-6
+}
+.onview{
+    @apply w-3/4 grid-cols-3 my-3 grid gap-6 p-6 mx-auto shadow
 }
 @media only screen and (max-width:600px) {
     .wrap{

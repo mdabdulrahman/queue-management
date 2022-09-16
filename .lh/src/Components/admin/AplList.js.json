@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/Components/admin/AplList.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1663337159231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663337165165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-r\n\\ No newline at end of file\n+import React, { Component } from 'react'\r\n+\r\n+export default class AplList extends Component {\r\n+  render() {\r\n+    return (\r\n+      <div>AplList</div>\r\n+    )\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1663337173273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React, { Component } from 'react'\r\n \r\n export default class AplList extends Component {\r\n+    \r\n   render() {\r\n     return (\r\n       <div>AplList</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1663337180121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { Component } from 'react'\r\n \r\n export default class AplList extends Component {\r\n-    \r\n+    rcon\r\n   render() {\r\n     return (\r\n       <div>AplList</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1663337187915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n import React, { Component } from 'react'\r\n \r\n export default class AplList extends Component {\r\n-    rcon\r\n+    constructor(props) {\r\n+      super(props)\r\n+    \r\n+      this.state = {\r\n+         \r\n+      }\r\n+    }\r\n   render() {\r\n     return (\r\n       <div>AplList</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1663337194087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     constructor(props) {\r\n       super(props)\r\n     \r\n       this.state = {\r\n-         \r\n+         view\r\n       }\r\n     }\r\n   render() {\r\n     return (\r\n"
+                },
+                {
+                    "date": 1663337273717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,21 @@\n       this.state = {\r\n          view:false\r\n       }\r\n     }\r\n-    \r\n+    let noview=(obj)=>{\r\n+        return (<div key={obj.aplno} className=\"noview\">\r\n+          <h1>Type : {obj.btype}</h1>\r\n+          <h1>{obj.bname}</h1>\r\n+          <h1>{obj.aplno}</h1>\r\n+          <button className='btn-secondary' onClick={()=>{fulview(obj)}}>View</button>\r\n+          {fulview(obj)}\r\n+          </div>)\r\n+      }\r\n+      let onview=(obj)=>{\r\n+        return (<div key={obj.aplno}>\r\n+          <h1>{obj.bname}</h1>\r\n+        \r\n   render() {\r\n     return (\r\n       <div>AplList</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1663337442601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n       }\r\n         \r\n   render() {\r\n     return (\r\n-      <div>{()=>this.state.view:noview(props)}</div>\r\n+      <div>{()=>this.state.view:noview(props.)}</div>\r\n     )\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1663337159231,
+            "name": "Commit-0",
+            "content": "r"
+        }
+    ]
+}
