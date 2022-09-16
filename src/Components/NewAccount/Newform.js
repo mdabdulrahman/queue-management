@@ -1,13 +1,11 @@
 import dbfirestore from '../firebase/DatabaseStore'
-import React, { useRef,useState,useEffect } from 'react'
+import React, { useRef,useState } from 'react'
 import emailjs from '@emailjs/browser';
-import { doc, setDoc , collection, addDoc} from "firebase/firestore"; 
+import { doc, setDoc} from "firebase/firestore"; 
 import Form from './Form';
 import Success from '../Success';
 import Fail from '../Fail';
 import {useNavigate} from "react-router-dom"
-import { getDatabase, ref as sRef, set } from "firebase/database";
-import db from "../firebase/db"
 function Newform() {
     const navigate = useNavigate();
 const [Status,setStatus]=useState(null)
@@ -30,8 +28,8 @@ let add=()=>{
   
     try {
         let aplno=String(values().aplno)
-        set(sRef(db, 'NewAccount/' + aplno), values());
-       /*  const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values()); */
+   /*      set(sRef(db, 'NewAccount/' + aplno), values()); */
+        const docRef =  setDoc(doc(dbfirestore, "NewAccount",aplno),values()); 
 
        
 NewAccountMail({Oname:Oname.current.value,bname:bname.current.value,email:email.current.value,aplno:aplno})

@@ -1,24 +1,13 @@
 import React from 'react'
-import {startTransition} from 'react';
-import { useState,useEffect } from 'react';
+import dbfirestore from './Components/firebase/DatabaseStore.js';
+import { useState,useEffect} from 'react';
+import {onSnapshot,collection} from "firebase/firestore";
+import useAdminfirestore from "./Components/snap.js"
 import Header from './Components/Header'
-import { get,child,ref} from "firebase/database";
-import db from "./Components/firebase/db.js"
 export default function Admin() {
-   
-   const [datas, setdatas] = useState([]);
     const [view, setview] = useState(false)
-    const [request, setrequest] = useState("")
-    get(child(ref(db), `NewAccount`)).then((snapshot) => {
-      if (snapshot.exists()) {
-setdatas(Object.keys(snapshot.val()).map(key=>snapshot.val()[key]))
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-      console.error(error);
-    });
-    
+    const [request, setrequest] = useState("") 
+ const datas=useAdminfirestore()
     let noview=(obj)=>{
       return (<div key={obj.aplno} className="noview">
         <h1>Type : {obj.btype}</h1>
@@ -32,21 +21,26 @@ setdatas(Object.keys(snapshot.val()).map(key=>snapshot.val()[key]))
         <h1>{obj.bname}</h1>
         </div>)
     }
-
-useEffect(() => {
+useEffect(()=>{
+  console.log(datas.length)
   try{
     
-  setrequest(datas.map((d)=>{return view?onview(d):noview(d)}))
-  }catch(e){
-
-  }
-}, [datas])
-
-   
-
-
-   
+    setrequest(datas.map((d)=>{return view?onview(d):noview(d)}))
+    }catch(e){
+  console.log(e)
+    }
+},[datas.length])   
+const unsubscribe = onSnapshot(collection(dbfirestore, "NewAccount"), (snapshot) => {
+  window.localStorage.setItem("data", JSON.stringify(snapshot.docs.map((doc)=>{return doc.data()}).length))
+ if(JSON.parse(localStorage.getItem("data"))!=datas.length){
+  try{
     
+    setrequest(datas.map((d)=>{return view?onview(d):noview(d)}))
+    }catch(e){
+  console.log(e)
+    }
+ }
+});   
   return (
     <div>
         <Header btn={null}/>

@@ -1,27 +1,28 @@
 import dbfirestore from './firebase/DatabaseStore';
-import { doc, onSnapshot,collection } from "firebase/firestore";
+import { doc, onSnapshot,collection,query } from "firebase/firestore";
 import react from "react"
-import { useState } from 'react';
+import { useEffect } from 'react';
 const useAdminfirestore=()=>{
-    const [r, setr] = useState([])
-const unsub = onSnapshot(
+    const unsubscribe = onSnapshot(collection(dbfirestore, "NewAccount"), (snapshot) => {
+        // Respond to data
+        // ...
+        window.localStorage.setItem("data", JSON.stringify(snapshot.docs.map((doc)=>{return doc.data()}).length))
+      });
+ useEffect(() => {
+
+ const unsub = onSnapshot(
     collection(dbfirestore, "NewAccount"), 
     (snapshot) => {
-        unsub()
   
-    if(r!=[]){
-       
-setr(snapshot.docs.map((doc)=>{return doc.data()}))
-    }
-unsub()
+        window.localStorage.setItem("datas", JSON.stringify(snapshot.docs.map((doc)=>{return doc.data()})))
+
 },
     (error) => {
       // ...
     });
-
-
-   
-
-return r
+    console.log(unsub)
+     
+ },[JSON.parse(localStorage.getItem("data"))])
+ return JSON.parse(localStorage.getItem("datas"))
 }
     export default useAdminfirestore
