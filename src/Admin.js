@@ -28,8 +28,9 @@ const datas=useAdminfirestore()
    status:false
   });
   setDoc(doc(dbfirestore, "RejectAccount",String(aplno)),obj); 
-  rejectMail({Oname:obj.Oname,aplno:aplno,reason:reason,email:obj.email})
   deleteDoc(doc(dbfirestore, "NewAccount", String(aplno)));
+  rejectMail({Oname:obj.Oname,aplno:aplno,reason:reason,email:obj.email})
+ 
 }catch(e){
     console.log(e)
   }
