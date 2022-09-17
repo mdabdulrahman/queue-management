@@ -5,7 +5,7 @@ import NewAccount from './NewAccount';
 import Success from './Components/Success';
 import SignInpg from './SignInpg';
 import Admin from './Admin';
-
+import 'animate.css';
 function App() {
 return(
  <BrowserRouter>

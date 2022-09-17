@@ -23,6 +23,6 @@ const useAdminfirestore=()=>{
     console.log(unsub)
      
  },[JSON.parse(localStorage.getItem("data"))])
- return JSON.parse(localStorage.getItem("datas"))
+ return (JSON.parse(localStorage.getItem("datas"))===null?[{}]:JSON.parse(localStorage.getItem("datas")))
 }
     export default useAdminfirestore

@@ -51,7 +51,7 @@ legend{
     @apply appearance-none border-gray-500 col-span-2 rounded py-2 px-3 w-full leading-tight focus:outline-none 
 }
 .form-control:focus{
-    @apply ring-zinc-800 ring-1 ring-offset-0 ring-offset-zinc-800 border-none
+    @apply ring-zinc-200 ring-4 transition  ring-offset-2  ring-offset-zinc-600 border-none
 }
 .greenBorder{
     @apply border-green-500 border
@@ -60,7 +60,7 @@ legend{
     @apply grid grid-cols-6 gap-6
 }
 .wrongInput{
-    @apply border-red-400  border ring ring-1 ring-red-500  ring-offset-red-200
+    @apply border-red-400  border  ring-1 ring-red-500  ring-offset-red-200
 }
 .success{
     @apply grid gap-4 px-4 w-2/4 border-green-500 border-2 mx-auto my-6 p-2 rounded bg-green-200 text-green-800
@@ -81,10 +81,10 @@ legend{
     @apply ring ring-4 ring-red-300 ring-offset-2 ring-offset-red-500
 }
 .noview{
-    @apply w-3/4 flex justify-between p-6 mx-auto items-center shadow rounded my-6
+    @apply w-3/5 flex justify-between p-6 mx-auto items-center shadow rounded my-6
 }
 .onview{
-    @apply w-3/4 grid-cols-3 my-3 grid gap-6 p-6 mx-auto shadow
+    @apply w-3/5 grid-cols-3 my-3 grid gap-6 p-6 mx-auto shadow
 }
 @media only screen and (max-width:600px) {
     .wrap{

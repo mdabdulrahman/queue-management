@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/Components/admin/rejectapl.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1663399274279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663399284892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n import React from 'react'\r\n \r\n function rejectapl() {\r\n-  return (\r\n-    <div>rejectapl</div>\r\n-  )\r\n+console\r\n }\r\n \r\n export default rejectapl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663399290592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n function rejectapl() {\r\n-console\r\n+console.log(\"hi\")\r\n }\r\n \r\n export default rejectapl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663399295894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+t'\r\n \r\n function rejectapl() {\r\n console.log(\"hi\")\r\n }\r\n"
+                },
+                {
+                    "date": 1663399443212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-t'\r\n \r\n-function rejectapl() {\r\n+\r\n+function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n export default rejectapl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663399449464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n \r\n-\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663399928347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import { doc, deleteDoc } from \"firebase/firestore\";\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663399937949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { doc, deleteDoc } from \"firebase/firestore\";\r\n+\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663399944245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { doc, deleteDoc } from \"firebase/firestore\";\r\n-\r\n+import db\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663399951348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { doc, deleteDoc } from \"firebase/firestore\";\r\n-import db\r\n+import dbfirest\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663399961215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { doc, deleteDoc } from \"firebase/firestore\";\r\n-import \r\n+import {}\r\n function rejectapl(aplno) {\r\n console.log(\"hi\")\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663400107200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { doc, deleteDoc } from \"firebase/firestore\";\r\n import dbfirestore from \"../firebase/DatabaseStore\"\r\n async function rejectapl(aplno) {\r\n-    await deleteDoc(doc(dbfi, \"cities\", \"DC\"));\r\n+    await deleteDoc(doc(dbfire, \"cities\", \"DC\"));\r\n }\r\n \r\n export default rejectapl\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1663399274279,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction rejectapl() {\r\n  return (\r\n    <div>rejectapl</div>\r\n  )\r\n}\r\n\r\nexport default rejectapl"
+        }
+    ]
+}
