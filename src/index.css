@@ -103,7 +103,7 @@ legend{
         @apply mx-2 text-justify
     }
     .intro-text{
-        @apply text-xl 
+        @apply text-3xl 
     }
     .header{
         @apply h-12

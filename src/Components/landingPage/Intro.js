@@ -8,7 +8,7 @@ function Intro() {
  <span >
   <h1 className='intro-text text-5xl animate__animated animate__backInDown'>No More Standing In Queues </h1>
 <h1 className='text-center py-3 intro-text text-2xl'>Manage Queues in Your Shop Online</h1>
- <button className='btn-secondary w-1/4 h-1/4  shadow mx-auto'>Get Started</button>
+ <button className='btn-secondary   shadow mx-auto'>Get Started</button>
  </span>
    </div>
     </div>
