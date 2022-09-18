@@ -116,7 +116,7 @@ legend{
         @apply text-xl 
     }
     .inner-intro{
-        @apply items-start my-24
+        @apply items-start my-48
     }
     .header{
         @apply h-12
