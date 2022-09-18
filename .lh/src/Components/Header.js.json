@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1662999614466,
@@ -20,6 +20,50 @@
                 {
                     "date": 1663072293691,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,52 +16,10 @@\n   btn1=<SignInbtn/>\r\n   btn2=<NewAccbtn/>\r\n   \r\n }\r\n-else{\r\n-  \r\n-}\r\n \r\n-  return (\r\n-    <div className='header'>\r\n-   <div className='wrap font-black'>\r\n-    Queue System\r\n-   </div>\r\n-   <div className='flex'>\r\n-   <div className='wrap'>\r\n-    {btn1}\r\n-   \r\n-   </div>\r\n-   <div className='wrap'>\r\n-    {btn2}\r\n-   \r\n-   </div>\r\n-    </div>\r\n-    </div>\r\n-  )\r\n-}\r\n \r\n-export default Header\n-import React from 'react'\r\n-import NewAccbtn from './NewAccbtn';\r\n-import SignInbtn from './landingPage/SignInbtn'\r\n-\r\n-\r\n-function Header(props) {\r\n-let btn1;\r\n-let btn2\r\n-if (props.btn==\"signIn\"){\r\n-  btn1=<SignInbtn/>\r\n-}\r\n-else if (props.btn==\"create\"){\r\n-  btn1=<NewAccbtn/>\r\n-}\r\n-else if(props.btn==\"\"){\r\n-  btn1=<SignInbtn/>\r\n-  btn2=<NewAccbtn/>\r\n-  \r\n-}\r\n-\r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap font-black'>\r\n     Queue System\r\n"
+                },
+                {
+                    "date": 1663480111242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './SignInbtn'\r\n+import logo from \r\n \r\n-\r\n function Header(props) {\r\n let btn1;\r\n let btn2\r\n if (props.btn==\"signIn\"){\r\n"
+                },
+                {
+                    "date": 1663480116765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './SignInbtn'\r\n-import logo from \r\n+import logo from  \"./\"\r\n \r\n function Header(props) {\r\n let btn1;\r\n let btn2\r\n"
+                },
+                {
+                    "date": 1663480126381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './SignInbtn'\r\n-import logo from  \"./\"\r\n+import logo from  \".\"\r\n \r\n function Header(props) {\r\n let btn1;\r\n let btn2\r\n"
+                },
+                {
+                    "date": 1663480132324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './SignInbtn'\r\n-import logo from  \".\"\r\n+import logo from  \"lo\"\r\n \r\n function Header(props) {\r\n let btn1;\r\n let btn2\r\n"
+                },
+                {
+                    "date": 1663480138075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n import NewAccbtn from './NewAccbtn';\r\n import SignInbtn from './SignInbtn'\r\n-import logo from  \"lo\"\r\n+import logo from  \"logo.png\"\r\n \r\n function Header(props) {\r\n let btn1;\r\n let btn2\r\n"
+                },
+                {
+                    "date": 1663480207282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+import React from 'react'\r\n+import NewAccbtn from './NewAccbtn';\r\n+import SignInbtn from './SignInbtn'\r\n+import logo from  \"./logo.png\"\r\n+\r\n+function Header(props) {\r\n+let btn1;\r\n+let btn2\r\n+if (props.btn==\"signIn\"){\r\n+  btn1=<SignInbtn/>\r\n+}\r\n+else if (props.btn==\"create\"){\r\n+  btn1=<NewAccbtn/>\r\n+}\r\n+else if(props.btn==\"\"){\r\n+  btn1=<SignInbtn/>\r\n+  btn2=<NewAccbtn/>\r\n+  \r\n+}\r\n+\r\n+\r\n+  return (\r\n+    <div className='header'>\r\n+   <div className='wrap font-black'>\r\n+    <img src={logo}></img>\r\n+    Queue System\r\n+   </div>\r\n+   <div className='flex'>\r\n+   <div className='wrap'>\r\n+    {btn1}\r\n+   \r\n+   </div>\r\n+   <div className='wrap'>\r\n+    {btn2}\r\n+   \r\n+   </div>\r\n+    </div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Header\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663480207384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,46 +38,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Header\n-import React from 'react'\r\n-import NewAccbtn from './NewAccbtn';\r\n-import SignInbtn from './SignInbtn'\r\n-import logo from  \"logo.png\"\r\n-\r\n-function Header(props) {\r\n-let btn1;\r\n-let btn2\r\n-if (props.btn==\"signIn\"){\r\n-  btn1=<SignInbtn/>\r\n-}\r\n-else if (props.btn==\"create\"){\r\n-  btn1=<NewAccbtn/>\r\n-}\r\n-else if(props.btn==\"\"){\r\n-  btn1=<SignInbtn/>\r\n-  btn2=<NewAccbtn/>\r\n-  \r\n-}\r\n-\r\n-\r\n-  return (\r\n-    <div className='header'>\r\n-   <div className='wrap font-black'>\r\n-    Queue System\r\n-   </div>\r\n-   <div className='flex'>\r\n-   <div className='wrap'>\r\n-    {btn1}\r\n-   \r\n-   </div>\r\n-   <div className='wrap'>\r\n-    {btn2}\r\n-   \r\n-   </div>\r\n-    </div>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Header\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663480225328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap font-black'>\r\n-    <img src={logo}></img>\r\n+    <img className='' src={logo}></img>\r\n     Queue System\r\n    </div>\r\n    <div className='flex'>\r\n    <div className='wrap'>\r\n"
+                },
+                {
+                    "date": 1663480249059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n \r\n \r\n   return (\r\n     <div className='header'>\r\n-   <div className='wrap font-black'>\r\n-    <img className='' src={logo}></img>\r\n+   <div className='wrap flex font-black'>\r\n+    <img className='w-11' src={logo}></img>\r\n     Queue System\r\n    </div>\r\n    <div className='flex'>\r\n    <div className='wrap'>\r\n"
+                },
+                {
+                    "date": 1663480259190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n \r\n   return (\r\n     <div className='header'>\r\n-   <div className='wrap flex  font-black'>\r\n+   <div className='wrap flex a font-black'>\r\n     <img className='w-11' src={logo}></img>\r\n     Queue System\r\n    </div>\r\n    <div className='flex'>\r\n"
+                },
+                {
+                    "date": 1663481036413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   return (\r\n     <div className='header'>\r\n    <div className='wrap flex items-center gap-2 font-black'>\r\n-    <img className='secondary-bg r w-11' src={logo}></img>\r\n+    <img className='secondary-bg ro w-11' src={logo}></img>\r\n     Queue System\r\n    </div>\r\n    <div className='flex'>\r\n    <div className='wrap'>\r\n"
                 }
             ],
             "date": 1662999614466,

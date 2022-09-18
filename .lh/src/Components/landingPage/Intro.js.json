@@ -1,0 +1,146 @@
+{
+    "sourceFile": "src/Components/landingPage/Intro.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 32,
+            "patches": [
+                {
+                    "date": 1663483147150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663483183587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n function Intro() {\r\n   return (\r\n-    <div>Intro</div>\r\n+    <div>\r\n+        \r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Intro\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663483231472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n-\r\n+import \r\n function Intro() {\r\n   return (\r\n     <div>\r\n-        \r\n+\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483238459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import \r\n+import intro from \"\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n \r\n"
+                },
+                {
+                    "date": 1663483245916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import intro from \"\"\r\n+import intro from \"./intro\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n \r\n"
+                },
+                {
+                    "date": 1663483257315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import intro from \"./intro\"\r\n+import intro from \"/intro.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n \r\n"
+                },
+                {
+                    "date": 1663483265414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import intro from \"/intro.jpg\"\r\n+import intro from \"./intro.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n \r\n"
+                },
+                {
+                    "date": 1663483272864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import intro from \"./intro.jpg\"\r\n+import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n \r\n"
+                },
+                {
+                    "date": 1663483288837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n-\r\n+<img src=\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483296137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n-<img src=\r\n+<img src={into}\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483309038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n-<img src={into}\r\n+<img src={intro}></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483333423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n-<img src={intro}></img>\r\n+<img src={intro} className></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483339935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div>\r\n-<img src={intro} className></img>\r\n+<img src={intro} className=\"w-\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483378381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n-    <div>\r\n-<img src={intro} className=\"w-\"></img>\r\n+    <div className='w-'>\r\n+<img src={intro} className=\"w-screen\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483383644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n-    <div className='w-'>\r\n+    <div >\r\n <img src={intro} className=\"w-screen\"></img>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663483390158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen\"></img>\r\n+<img src={intro} className=\"w-screen h-screen\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483416088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen h-screen\"></img>\r\n+<img src={intro} className=\"w-screen h-screen bri\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483424528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen h-screen bri\"></img>\r\n+<img src={intro} className=\"w-screen h-screen brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483447583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen h-screen brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h- brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483454844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen h- brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-[90%] brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483470751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div >\r\n-<img src={intro} className=\"w-screen h-[90%] brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-3/4 brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483489604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n-    <div >\r\n+    <div className=''>\r\n <img src={intro} className=\"w-screen h-3/4 brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663483495954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n-    <div className=''>\r\n+    <div className='h-screen'>\r\n <img src={intro} className=\"w-screen h-3/4 brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663483526911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-3/4 brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-3/4 ob brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483532405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-3/4 ob brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-3/4 object-contain brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663483548697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-3/4 object-contain brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-3/4 object-cover brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663484958858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-3/4 object-cover brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-5/6 object-cover brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485012126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-5/6 object-cover brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-[] object-cover brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485036339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-[] object-cover brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-[90%] object-cover brightness-50\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485064862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-[90%] object-cover brightness-50\"></img>\r\n+<img src={intro} className=\"w-screen h-[90%] object-cover brightness-75\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485217264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-[90%] object-cover brightness-75\"></img>\r\n+<img src={intro} className=\"w-screen h-[90%] blur-sm object-cover brightness-75\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485272534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import intro from \"./into.jpg\"\r\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n-<img src={intro} className=\"w-screen h-[90%] blur-[] object-cover brightness-75\"></img>\r\n+<img src={intro} className=\"w-screen h-[90%] blur-[2px] object-cover brightness-75\"></img>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663485320095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function Intro() {\r\n   return (\r\n     <div className='h-screen'>\r\n <img src={intro} className=\"w-screen h-[90%] blur-sm object-cover brightness-75\"></img>\r\n-   <h1>No </h1>\r\n+   <h1>No M</h1>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1663483147150,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Intro() {\r\n  return (\r\n    <div>Intro</div>\r\n  )\r\n}\r\n\r\nexport default Intro"
+        }
+    ]
+}

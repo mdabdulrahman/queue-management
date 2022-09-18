@@ -1,0 +1,38 @@
+{
+    "sourceFile": "public/manifest.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1663478513061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663478521534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n-  \"short_name\": \"\",\r\n+  \"short_name\": \"Queue Sys\",\r\n   \"name\": \"Create React App Sample\",\r\n   \"icons\": [\r\n   \r\n   ],\r\n"
+                },
+                {
+                    "date": 1663478538551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n-  \"short_name\": \"Queue Sys\",\r\n-  \"name\": \"Create React App Sample\",\r\n+  \"short_name\": \"Queue\",\r\n+  \"name\": \"Queue \",\r\n   \"icons\": [\r\n   \r\n   ],\r\n   \"start_url\": \".\",\r\n"
+                },
+                {
+                    "date": 1663478544813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n   \"short_name\": \"Queue\",\r\n-  \"name\": \"Queue \",\r\n+  \"name\": \"Queue Management \",\r\n   \"icons\": [\r\n   \r\n   ],\r\n   \"start_url\": \".\",\r\n"
+                },
+                {
+                    "date": 1663478555822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n   \"short_name\": \"Queue\",\r\n-  \"name\": \"Queue Management \",\r\n+  \"name\": \"Queue Management System to manage \",\r\n   \"icons\": [\r\n   \r\n   ],\r\n   \"start_url\": \".\",\r\n"
+                },
+                {
+                    "date": 1663478568282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n   \"short_name\": \"Queue\",\r\n-  \"name\": \"Queue Management System to manage \",\r\n+  \"name\": \"Queue Management System to manage queue\",\r\n   \"icons\": [\r\n   \r\n   ],\r\n   \"start_url\": \".\",\r\n"
+                }
+            ],
+            "date": 1663478513061,
+            "name": "Commit-0",
+            "content": "{\r\n  \"short_name\": \"\",\r\n  \"name\": \"Create React App Sample\",\r\n  \"icons\": [\r\n  \r\n  ],\r\n  \"start_url\": \".\",\r\n  \"display\": \"standalone\",\r\n  \"theme_color\": \"#000000\",\r\n  \"background_color\": \"#ffffff\"\r\n}\r\n"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
 *{
     font-family: 'Work Sans', sans-serif;
@@ -8,23 +9,33 @@
 .primary-text{
     @apply text-zinc-800 
 }
+.primary-text::selection{
+    @apply primary-bg
+}
 .primary-bg{
     @apply bg-zinc-800
 }
 .secondary-text{
     @apply text-zinc-100 
 }
+.secondary-text::selection{
+    @apply secondary-bg 
+}
 .secondary-bg{
     @apply bg-zinc-100
 }
 .header{
-   @apply sticky primary-bg secondary-text h-12 flex justify-between shadow-md items-center
+   @apply sticky primary-bg  secondary-text h-16 flex justify-between shadow-md items-center
+}
+.intro-text{
+    font-family: 'Patrick Hand SC', cursive;
+    @apply  secondary-text 
 }
 .wrap{
     @apply mx-6 text-lg
 }
 .btn-primary{
-    @apply secondary-bg primary-text p-2 text-sm rounded
+    @apply secondary-bg flex gap-2 justify-center font-bold items-center primary-text p-2 text-sm rounded
 }
 .btn-primary:hover{
     @apply ring ring-2 ring-zinc-200 ring-offset-1 ring-offset-zinc-800
@@ -33,7 +44,7 @@
 @apply primary-bg secondary-text
 }
 .btn-secondary{
-    @apply primary-bg  secondary-text p-2 text-sm rounded
+    @apply primary-bg flex items-center justify-center gap-2 secondary-text p-2 text-sm rounded
 }
 .btn-secondary:hover{
     @apply ring ring-2 ring-zinc-300 ring-offset-1 ring-offset-zinc-600
@@ -66,7 +77,7 @@ legend{
     @apply grid gap-4 px-4 w-2/4 border-green-500 border-2 mx-auto my-6 p-2 rounded bg-green-200 text-green-800
 }
 .success-btn{
-@apply bg-green-500 px-16 shadow-md mx-auto rounded text-white
+@apply bg-green-500  flex items-center justify-center gap-2 px-16 shadow-md mx-auto rounded text-white
 }
 .success-btn:hover{
     @apply ring ring-4 ring-green-300 ring-offset-2 ring-offset-green-500
@@ -75,7 +86,7 @@ legend{
     @apply grid gap-4 px-4 w-2/4 border-red-500 border-2 mx-auto my-6 p-2 rounded bg-red-200 text-red-800
 }
 .fail-btn{
-@apply bg-red-500 px-16 shadow-md mx-auto rounded text-white
+@apply bg-red-500  flex items-center justify-center gap-2 px-16 shadow-md mx-auto rounded text-white
 }
 .fail-btn:hover{
     @apply ring ring-4 ring-red-300 ring-offset-2 ring-offset-red-500
@@ -86,11 +97,14 @@ legend{
 .onview{
     @apply w-3/5 grid-cols-3 my-3 grid gap-6 p-6 mx-auto shadow
 }
+
 @media only screen and (max-width:600px) {
     .wrap{
         @apply mx-2 text-justify
     }
-    
+    .intro-text{
+        @apply text-xl 
+    }
     .header{
         @apply h-12
     }

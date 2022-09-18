@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1663000230808,
@@ -36,6 +36,10 @@
                 {
                     "date": 1663000418968,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useNavigate } from 'react-router-dom'\r\n function SignInbtn() {\r\n   const navigate=useNavigate()\r\n   return (\r\n-    <div><button className='btn-primary' onClick={()navigate(\"/signin\")}>Sign In</button></div>\r\n+    <div><button className='btn-primary' onClick={()=navigate(\"/signin\")}>Sign In</button></div>\r\n   )\r\n }\r\n \r\n export default SignInbtn\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663481335652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useNavigate } from 'react-router-dom'\r\n function SignInbtn() {\r\n   const navigate=useNavigate()\r\n   return (\r\n-    <div><button className='btn-primary fl' onClick={()=>navigate(\"/signin\")}>\r\n+    <div><button className='btn-primary flx' onClick={()=>navigate(\"/signin\")}>\r\n       <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth={1.5} stroke=\"currentColor\" className=\"w-6 h-6\">\r\n   <path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9\" />\r\n </svg>\r\n       Sign In</button></div>\r\n"
                 }
             ],
             "date": 1663000230808,
