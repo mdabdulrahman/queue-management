@@ -5,7 +5,7 @@ function Intro() {
   return (
     <div className='h-screen'>
      
-<img src={intro} className="w-screen absolute h-[90%] blur-sm object-cover brightness-50 "></img>
+<img src={intro} className="w-screen h-[90%] absolute blur-sm object-cover brightness-50 "></img>
 
   <div className="inner-intro">
  <span >
@@ -14,7 +14,7 @@ function Intro() {
  <button className='btn-secondary   shadow mx-auto'>Get Started</button>
  </span>
    </div>
-   <Menu/>
+ 
     </div>
   )
 }
