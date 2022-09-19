@@ -60,7 +60,13 @@
 @apply primary-bg secondary-text
 }
 .form{
-    @apply container px-6 h-full shadow rounded secondary-bg w-[60%] my-3  mx-auto
+    @apply container px-8 h-full border  secondary-bg lg:w-4/6 w-5/6 my-3  mx-auto
+}
+.form-sign{
+    @apply lg:w-1/4 w-2/4 secondary-bg gap-3  mx-auto grid grid-cols-1 border p-12 mt-24
+}
+.icontext{
+    @apply flex items-center gap-2
 }
 legend{
     @apply primary-bg border-2 secondary-text px-3 py-1 shadow-lg rounded mb-6 mx-auto
@@ -126,6 +132,9 @@ legend{
     }
     .form{
         @apply  w-5/6
+    }
+    .form-sign{
+        @apply w-5/6 p-8 my-12
     }
     .inner-form{
         @apply flex-col gap-3 pb-2 grid-cols-none
