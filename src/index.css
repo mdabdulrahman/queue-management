@@ -25,7 +25,7 @@
     @apply bg-zinc-100
 }
 .header{
-   @apply sticky primary-bg  secondary-text h-16 flex justify-between shadow-md items-center
+   @apply  primary-bg  secondary-text h-16 flex justify-between shadow-md items-center
 }
 .intro-text{
     font-family: 'Patrick Hand SC', cursive;

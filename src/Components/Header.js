@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import NewAccbtn from './NewAccbtn';
 import SignInbtn from './SignInbtn'
 import logo from  "./logo.png"
+import Menu from './Menu';
 
 function Header(props) {
   console.log(window.outerWidth)
@@ -26,6 +27,7 @@ if (mobile>=600){
   
 
   return (
+    <div>
     <div className='header'>
    <div className='wrap flex items-center gap-2 font-black'>
     <img className=' rounded-full p-1 w-11' src={logo}></img>
@@ -42,14 +44,17 @@ if (mobile>=600){
    </div>
     </div>
     </div>
+    </div>
   )}
   else{
     return(
-      <div className='header'>
+      <div className='sticky'>
+      <div className='header '>
         <div className='wrap'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
 </svg>
 </div>
+
       <div className='wrap flex items-center gap-2 font-black'>
        <img className=' rounded-full p-1 w-11' src={logo}></img>
   
@@ -63,6 +68,7 @@ if (mobile>=600){
        {btn2}
       
       </div>
+       </div>
        </div>
        </div>
     )

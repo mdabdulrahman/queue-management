@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/Components/Menu.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1663593421894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663593433889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rcf\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+function Menu() {\r\n+  return (\r\n+    <div>Menu</div>\r\n+  )\r\n+}\r\n+\r\n+export default Menu\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663593563950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Menu() {\r\n   return (\r\n-    <div>Menu</div>\r\n+    <div className='absolute'>Menu</div>\r\n   )\r\n }\r\n \r\n export default Menu\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663593575016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n \r\n function Menu() {\r\n   return (\r\n-    <div className='absolute'>Menu</div>\r\n+    <div className='absolute '>\r\n+        Menu</div>\r\n   )\r\n }\r\n \r\n export default Menu\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663593583143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Menu() {\r\n   return (\r\n-    <div className='absolute '>\r\n+    <div className='absolute w-1/4'>\r\n         Menu</div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663593592701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Menu() {\r\n   return (\r\n-    <div className='absolute w-1/4 h-scree'>\r\n+    <div className='absolute w-1/4 h-screen'>\r\n         Menu</div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663593638786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Menu() {\r\n   return (\r\n-    <div className='absolute h-'>\r\n+    <div className='absolute h-s'>\r\n         Menu</div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1663593421893,
+            "name": "Commit-0",
+            "content": "rcf"
+        }
+    ]
+}
