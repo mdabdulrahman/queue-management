@@ -8,6 +8,7 @@ function Header(props) {
   console.log(window.outerWidth)
   const [mobile, setmobile] = useState(window.outerWidth)
 const [menu, setmenu] = useState(false)
+
 let btn1;
 let btn2
 if (props.btn=="signIn"){

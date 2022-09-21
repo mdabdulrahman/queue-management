@@ -42,7 +42,7 @@
     @apply mx-6 text-lg
 }
 .btn-primary{
-    @apply secondary-bg flex gap-2 justify-center font-bold items-center primary-text p-2 text-sm rounded
+    @apply secondary-bg flex gap-2 justify-center font-bold items-center primary-text p-2 text-sm rounded-sm
 }
 .btn-primary:hover{
     @apply ring ring-2 ring-zinc-200 ring-offset-1 ring-offset-zinc-800
@@ -51,7 +51,7 @@
 @apply primary-bg secondary-text
 }
 .btn-secondary{
-    @apply primary-bg flex items-center justify-center gap-2 secondary-text p-2 text-sm rounded
+    @apply primary-bg flex items-center justify-center gap-2 secondary-text p-2 text-sm rounded-sm
 }
 .btn-secondary:hover{
     @apply ring ring-2 ring-zinc-300 ring-offset-1 ring-offset-zinc-600
