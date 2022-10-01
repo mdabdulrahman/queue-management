@@ -3,6 +3,7 @@ import NewAccbtn from './NewAccbtn';
 import SignInbtn from './SignInbtn'
 import logo from  "./logo.png"
 import Menu from './Menu';
+import SignOutbtn from './SignOutbtn';
 
 function Header(props) {
 
@@ -17,6 +18,9 @@ if (props.btn=="signIn"){
 }
 else if (props.btn=="create"){
   btn1=<NewAccbtn/>
+}
+else if(props.btn=="signOut"){
+  btn1=<SignOutbtn/>
 }
 else if(props.btn==""){
   btn1=<SignInbtn/>

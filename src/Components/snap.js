@@ -2,8 +2,8 @@ import dbfirestore from './firebase/DatabaseStore';
 import { doc, onSnapshot,collection,query } from "firebase/firestore";
 import react from "react"
 import { useEffect } from 'react';
-const useAdminfirestore=()=>{
-    const unsubscribe = onSnapshot(collection(dbfirestore, "NewAccount"), (snapshot) => {
+const useAdminfirestore=(ref)=>{
+    const unsubscribe = onSnapshot(ref, (snapshot) => {
         // Respond to data
         // ...
         window.localStorage.setItem("data", JSON.stringify(snapshot.docs.map((doc)=>{return doc.data()}).length))
@@ -11,7 +11,7 @@ const useAdminfirestore=()=>{
  useEffect(() => {
 
  const unsub = onSnapshot(
-    collection(dbfirestore, "NewAccount"), 
+    ref, 
     (snapshot) => {
   
         window.localStorage.setItem("datas", JSON.stringify(snapshot.docs.map((doc)=>{return doc.data()})))

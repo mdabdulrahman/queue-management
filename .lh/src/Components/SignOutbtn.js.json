@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/Components/SignOutbtn.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1664634258472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664634264481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-rcfe\r\n+rcf\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664634271077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,7 @@\n-rcf\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+export default function s() {\r\n+  return (\r\n+    <div>s</div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1664634277034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-export default function s() {\r\n+export default function SignOut() {\r\n   return (\r\n-    <div>s</div>\r\n+    <div>SignOut</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664634286981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n import React from 'react'\r\n \r\n-export default function SignOut() {\r\n+export default function SignOutbtn\r\n+() {\r\n   return (\r\n-    <div>SignOut</div>\r\n+    <div>SignOutbtn\r\n+        \r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664634444917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n export default function SignOutbtn\r\n () {\r\n   return (\r\n     <div>\r\n+        \r\n \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664634532116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n </svg>\r\n Sign In</button>\r\n   }\r\n   else{\r\n-    btn=<h1  onClick={alert()}><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth={1.5} stroke=\"currentColor\" className=\"w-6 h-6\">\r\n+    btn=<h1  onClick={alert(\"\")}><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth={1.5} stroke=\"currentColor\" className=\"w-6 h-6\">\r\n     <path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9\" />\r\n     </svg></h1>\r\n   }\r\n   return (\r\n"
+                }
+            ],
+            "date": 1664634258472,
+            "name": "Commit-0",
+            "content": "rcfe\r\n"
+        }
+    ]
+}

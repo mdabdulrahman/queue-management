@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1663857939155,
@@ -28,6 +28,70 @@
                 {
                     "date": 1663947112963,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n-  console.log()\r\n+  console.log(props.name)\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628502492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n+  \r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628510226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n-  \r\n+  useSta\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628522144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n-  useSta\r\n+  const [name, setname] = useState(props.name)\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628528314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n+  useE\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628534797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,14 @@\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n-  useE\r\n+  useEffect(() => {\r\n+    \r\n+  \r\n+   \r\n+  }, [third])\r\n+  \r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628540323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   useEffect(() => {\r\n     \r\n   \r\n    \r\n-  }, [third])\r\n+  }, [])\r\n   \r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1664628783168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n   useEffect(() => {\r\n     \r\n-  \r\n+  props\r\n    \r\n-  }, [])\r\n+  }, [name])\r\n   \r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1664628789246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n   useEffect(() => {\r\n     \r\n-  props\r\n+  setname()\r\n    \r\n   }, [name])\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1664628796178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n   useEffect(() => {\r\n     \r\n-  setname()\r\n+  setname(props.name())\r\n    \r\n   }, [name])\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1664628807513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React,{} from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n"
+                },
+                {
+                    "date": 1664628813236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React,{} from 'react'\r\n+import React,{useS} from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n"
+                },
+                {
+                    "date": 1664628820346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React,{useS} from 'react'\r\n+import React,{useState,useEffect} from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n"
+                },
+                {
+                    "date": 1664628835511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n   useEffect(() => {\r\n     \r\n-  setname(props.name())\r\n+  setname(props.name)\r\n    \r\n   }, [name])\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1664628841081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,9 @@\n-import React,{useState,useEffect} from 'react'\r\n+import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n-  useEffect(() => {\r\n-    \r\n-  setname(props.name)\r\n-   \r\n-  }, [name])\r\n-  \r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1664628889853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React,{} from 'react'\r\n+import React,{u} from 'react'\r\n \r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n   const [name, setname] = useState(props.name)\r\n"
+                },
+                {
+                    "date": 1664631927986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { collection } from 'firebase/firestore'\r\n import useAdminfirestore from '../snap'\r\n function Dashboard(props) {\r\n   console.log(props.name)\r\n-  const data=useAdminfirestore(collection(dbfirestore,`Users/${String(props)}`))\r\n+  const data=useAdminfirestore(collection(dbfirestore,`Users/${String(props.)}`))\r\n   const [name, setname] = useState(props.name)\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n"
                 }
             ],
             "date": 1663857939155,
