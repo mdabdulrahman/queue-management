@@ -33,7 +33,7 @@ let stateOptions=states()
         <option value="Select the City"></option>}}
 let cityOptions=cities()
 let borderChange=(e)=>{
-    console.log(e)
+
     if (e.target.name==="number"){
         if (e.target.value.length>=6&&e.target.validity.valid&&e.target.value!==""){
             try{

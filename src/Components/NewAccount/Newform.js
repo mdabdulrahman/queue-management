@@ -59,7 +59,7 @@ return state
 }
 
 let validate=()=>{
-console.log(number.current.validity.valid);
+
 if (number.current.value!=""&&bname.current.value!=""&&btype.current.value!=""&&Oname.current.value!=""&&email.current.value!=""&&number.current.validity.valid&&adrs.current.value!=""&&gurl.current.value!=""&&country!=""&&state!=""&&city!=""){
 add()
 }

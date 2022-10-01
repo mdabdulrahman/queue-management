@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/Components/user/Dashboard.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1663857939155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663857944472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-function Dashboard() {\r\n+function Dashboard(props) {\r\n   return (\r\n     <div>Dashboard</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663857954482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   return (\r\n-    <div>Dashboard</div>\r\n+    <div>Hello ,</div>\r\n   )\r\n }\r\n \r\n export default Dashboard\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663857962119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n   return (\r\n-    <div>Hello ,</div>\r\n+    <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n \r\n export default Dashboard\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663947106162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n+  console.log()\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663947112963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n \r\n function Dashboard(props) {\r\n-  console.log()\r\n+  console.log(props.name)\r\n   return (\r\n     <div>Hello ,{props.name}</div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1663857939155,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Dashboard() {\r\n  return (\r\n    <div>Dashboard</div>\r\n  )\r\n}\r\n\r\nexport default Dashboard"
+        }
+    ]
+}

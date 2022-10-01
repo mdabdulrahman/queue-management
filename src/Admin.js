@@ -13,6 +13,19 @@ const datas=useAdminfirestore()
  
  
  emailjs.init("cIeMk0LUDw2EwLRfP")
+ let accept=(obj)=>{
+  let userdata={...obj,vcode:(Math.floor((Math.random()*10000))),status:true}
+console.log(userdata)
+try{
+
+   setDoc(doc(dbfirestore, "AcceptedAccount",String(userdata.aplno)),userdata); 
+   deleteDoc(doc(dbfirestore, "NewAccount", String(userdata.aplno)));
+   emailjs.send('service_u92gbxa', 'template_uwms6wa',userdata, 'ktsY8XEB_EZdw3YDx')
+}
+catch(e){
+
+}
+ }
  let rejectMail=(obj)=>{
   emailjs.send('service_964xhgh', 'template_1zc9cvy',obj, 'cIeMk0LUDw2EwLRfP')
   .then((result) => {
@@ -24,10 +37,7 @@ const datas=useAdminfirestore()
  let reject=(aplno,reason,obj)=>{
   console.log(obj)
   try{
-  updateDoc(doc(dbfirestore,"NewAccount",String(aplno)), {
-   status:false
-  });
-  setDoc(doc(dbfirestore, "RejectAccount",String(aplno)),obj); 
+  setDoc(doc(dbfirestore, "RejectAccount",String(aplno)),{...obj,status:false}); 
   deleteDoc(doc(dbfirestore, "NewAccount", String(aplno)));
   rejectMail({Oname:obj.Oname,aplno:aplno,reason:reason,email:obj.email})
  
@@ -39,10 +49,10 @@ const datas=useAdminfirestore()
 
     
 useEffect(()=>{
-  console.log(datas.length)
+ 
   try{
     
-    setrequest(datas.map((d)=>{return <AplList key={d.aplno} data={d} reject={reject}/> }))
+    setrequest(datas.map((d)=>{return <AplList key={d.aplno} data={d} reject={reject} accept={accept} />  }))
     }catch(e){
   console.log(e)
     }
@@ -53,7 +63,7 @@ const unsubscribe = onSnapshot(collection(dbfirestore, "NewAccount"), (snapshot)
  if(JSON.parse(localStorage.getItem("data"))!=datas.length){
   try{
    
-    setrequest(datas.map((d)=>{return <AplList key={d.aplno} data={d} reject={reject}/> }))
+    setrequest(datas.map((d)=>{return <AplList key={d.aplno} data={d} reject={reject} accept={accept} />  }))
     }catch(e){
   console.log(e)
     }

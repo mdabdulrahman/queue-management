@@ -5,7 +5,7 @@ import logo from  "./logo.png"
 import Menu from './Menu';
 
 function Header(props) {
-  console.log(window.outerWidth)
+
   const [mobile, setmobile] = useState(window.outerWidth)
 const [menu, setmenu] = useState(false)
 
