@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import loader from "../group.png"
 import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 import app from '../firebase/connect';
 export default class SignIn extends Component {
@@ -8,7 +8,8 @@ export default class SignIn extends Component {
     
       this.state = {
          email:"",
-         password:""
+         password:"",
+         loader:<h1>Sign In</h1>
       }
     }
    
@@ -17,6 +18,7 @@ export default class SignIn extends Component {
   render() {
     return (
       <div>
+        {this.props.children}
         <fieldset className='form-sign'>
    
             <label className='flex gap-2 items-center'>
@@ -32,7 +34,10 @@ export default class SignIn extends Component {
 </svg>
 Password</label>
         <input type="password" className='form-control' onChange={(e)=>{this.setState({password:e.target.value})}} name="password"></input>
-        <button className='btn-secondary m-2 ' onClick={()=>this.props.signin(this.state.email,this.state.password)}>Sign In</button>
+        <button className='btn-secondary m-2 ' onClick={()=>{this.props.signin(this.state.email,this.state.password);this.setState({loader:<><div className='h-6 w-6 rounded-full border-t-4 bg-zinc-500 animate-spin'></div><h1 className='animate-pulse'>Loading...</h1></>})}}>
+
+{this.state.loader}
+</button>
        <span className='col-span-2 text-sm text-center'>Don't have account ? <a href="/NewAccount">Register Now</a></span>
        <span className=' text-sm flex justify-center items-center gap-2'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />

@@ -23,14 +23,16 @@ const auth=getAuth(app)
 /* db firestore realtime database */
 const db = getDatabase(app);
 const [userid, setuserid] = useState(false)
+const [signStatus, setsignStatus] = useState(null)
 onAuthStateChanged(auth, (user) => {
     if (user) {
       //User sign in
       const uid=user.uid
-    setuserid(uid)
+ setuserid(uid)
     } 
     else {
 //User sign out
+setuserid(false)
     }
   });
   //Create User after verification
@@ -55,7 +57,7 @@ let createUser=async(obj)=>{
    ;
   
 setuserid(user.uid)
-set(ref(db, 'users/' + user.uid),udata).then(window.location.pathname=`user/${userid}`)
+set(ref(db, 'users/' + user.uid),udata).then(window.location.pathname=`user`)
          // ...
     })
     .catch((error) => {
@@ -69,29 +71,37 @@ else{
 alert("Wrong Application Number")
 }
 }
-/* useEffect(() => {
-  if(userid!=false){
-  window.location.pathname=`user/${userid}`}
-}, [userid]) */
+useEffect(() => {
+  
+  if(userid!=false&&window.location.pathname!=`/user`&&window.location.pathname!="/admin"){
+    window.location.pathname=`user`
+  }
+}, [userid])
 let signIn=(email,password)=>{
   console.log("signin")
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
   // Signed in 
   const user = userCredential.user;
-  if (user.uid==="oxT7SbBZzxQqIlAfpFODYAJnWKn2"){
-    window.location.pathname=`/admin`
-  }
-  else{
-    alert("success")
-    window.location.pathname=`user/${userid}`
-  }
+
+    setsignStatus(true)
+setTimeout(()=>{
+    if(user.uid=="oxT7SbBZzxQqIlAfpFODYAJnWKn2"){
+      window.location.pathname="/admin"
+    }
+    else{
+    window.location.pathname=`user`
+    }},3000)
+    return true
   // ...
   })
   .catch((error) => {
+    setsignStatus(false)
   const errorCode = error.code;
   const errorMessage = error.message;
   console.log(error)
+  return false
+  
   });
 }
 return(
@@ -99,10 +109,10 @@ return(
  <Routes>
   <Route exact path='/' element={<LandingPage/>}/>
   <Route exact path='/NewAccount' element={<NewAccount/>}/>
- <Route exact path='/signin' element={<SignInpg signIn={signIn}/>}/>
- <Route exact path='/admin' element={<Admin/>}/>
+ <Route exact path='/signin' element={<SignInpg signIn={signIn} signStatus={signStatus}/>}/>
+ <Route exact path='/admin' element={<Admin uid={userid}/>}/>
  <Route exact path='/activateaccount' element={<Createps createUser={createUser}/>}/>
- <Route exact path={`/user/:id`} element={<Dashboard uid={userid} auth={auth}/>}/>
+ <Route exact path={`/user`} element={<Dashboard uid={userid} auth={auth}/>}/>
  </Routes>
  </BrowserRouter>
 )

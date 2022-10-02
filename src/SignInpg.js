@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Header from './Components/Header'
 import SignIn from './Components/signIn/SignIn'
 import app from "./Components/firebase/connect"
 import {  onAuthStateChanged,getAuth,signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import Success from './Components/Success';
+import Fail from './Components/Fail';
 
 function SignInpg(props) {
   const auth=getAuth(app)
@@ -26,11 +28,28 @@ function SignInpg(props) {
       // ...
     }
   }); */
+const [signStatus, setsignStatus] = useState(null)
+ useEffect(() => {
+  if(props.signStatus==null){
+
+  }
+   else if(props.signStatus){
+    setsignStatus(<Success info={"Successfull 👍!"}/>)
+   }
+ else if(!props.signStatus){
+  console.log("helo")
+  setsignStatus(<Fail info={"Email id Or Password is Wrong , Try Again !!"}/>)
+ }
+ 
+
+ }, [props.signStatus])
  
   return (
     <div>
       <Header btn="create"/>
-        <SignIn signin={props.signIn}/>
+        <SignIn signin={props.signIn} signStatus={props.signStatus}>
+        {signStatus}
+        </SignIn>
     </div>
   )
 }
