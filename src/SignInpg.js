@@ -48,7 +48,7 @@ const [signStatus, setsignStatus] = useState(null)
     <div>
       <Header btn="create"/>
         <SignIn signin={props.signIn} signStatus={props.signStatus}>
-        {signStatus}
+        
         </SignIn>
     </div>
   )

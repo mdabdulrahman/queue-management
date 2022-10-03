@@ -79,20 +79,20 @@ useEffect(() => {
 }, [userid])
 let signIn=(email,password)=>{
   console.log("signin")
-  signInWithEmailAndPassword(auth, email, password)
+  return signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
   // Signed in 
   const user = userCredential.user;
 
     setsignStatus(true)
-setTimeout(()=>{
+
     if(user.uid=="oxT7SbBZzxQqIlAfpFODYAJnWKn2"){
       window.location.pathname="/admin"
     }
     else{
     window.location.pathname=`user`
-    }},3000)
-    return true
+    }
+return true
   // ...
   })
   .catch((error) => {
@@ -100,9 +100,10 @@ setTimeout(()=>{
   const errorCode = error.code;
   const errorMessage = error.message;
   console.log(error)
+
   return false
-  
-  });
+  })
+
 }
 return(
  <BrowserRouter>
