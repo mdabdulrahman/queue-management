@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import NewAccbtn from './NewAccbtn';
 import SignInbtn from './SignInbtn'
 import logo from  "./logo.png"
@@ -9,7 +9,10 @@ function Header(props) {
 
   const [mobile, setmobile] = useState(window.outerWidth)
 const [menu, setmenu] = useState(false)
-
+useEffect(() => {
+ setmobile(window.outerWidth)
+ console.log(window.outerWidth)
+}, window.innerWidth);
 let btn1;
 let btn2
 if (props.btn=="signIn"){

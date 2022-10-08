@@ -73,7 +73,7 @@ const unsubscribe = onSnapshot(collection(dbfirestore, "NewAccount"), (snapshot)
 });  
 const [checkAdmin, setcheckAdmin] = useState(false)
 useEffect(()=>{
-  
+  console.log(props.uid)
 if(props.uid!="oxT7SbBZzxQqIlAfpFODYAJnWKn2"){
 console.log("access denied")
 setcheckAdmin(false)
@@ -100,7 +100,7 @@ let content=<><Header btn={"signOut"}/>
 </div></>
   return (
     <div >
-    {checkAdmin?content:<h1 className='text-red-500 text-center text-3xl'>Access denied</h1>}
+    {checkAdmin?content:props.uid==false?<h1>loading....</h1>:<h1 className='text-red-500 text-center text-3xl'>Access denied</h1>}
     </div>
   )
 }
