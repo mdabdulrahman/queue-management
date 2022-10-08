@@ -6,6 +6,7 @@ import { getDatabase, ref, onValue} from "firebase/database";
 import db from "../firebase/db"
 import Header from '../Header';
 import { data } from 'autoprefixer';
+import Sidebar from './Sidebar';
 
 function Dashboard(props) {
   console.log(props.uid)
@@ -20,7 +21,11 @@ console.log(data)
   return (
     <div>
       <Header btn={"signOut"}/>
-      Hello {datas!=null?datas.Oname:"loading............"} ,</div>
+      <Sidebar/>
+      <div className='ml-24'>
+      <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
+      </div>
+      </div>
   )
 }
 

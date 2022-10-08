@@ -42,8 +42,8 @@ if (mobile>=600){
 
   return (
     <div>
-    <div className='header'>
-   <div className='wrap flex items-center gap-2 font-black'>
+    <div className='header '>
+   <div className='wrap flex items-center gap-2 font-black '>
     <img className=' rounded-full p-1 w-11' src={logo}></img>
     Queue System
    </div>

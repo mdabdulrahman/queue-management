@@ -45,7 +45,7 @@
     @apply secondary-bg flex gap-2 justify-center font-bold items-center primary-text p-2 text-sm rounded-sm
 }
 .btn-primary:hover{
-    @apply ring ring-2 ring-zinc-200 ring-offset-1 ring-offset-zinc-800
+    @apply  ring-2 ring-zinc-200 ring-offset-1 ring-offset-zinc-800
 }
 .btn-primary:active{
 @apply primary-bg secondary-text
@@ -54,7 +54,7 @@
     @apply primary-bg flex items-center justify-center gap-2 secondary-text p-2 text-sm rounded-sm
 }
 .btn-secondary:hover{
-    @apply ring ring-2 ring-zinc-300 ring-offset-1 ring-offset-zinc-600
+    @apply  ring-2 ring-zinc-300 ring-offset-1 ring-offset-zinc-600
 }
 .btn-seconday:active{
 @apply primary-bg secondary-text
@@ -93,7 +93,7 @@ legend{
 @apply bg-green-500  flex items-center justify-center gap-2 px-16 shadow-md mx-auto rounded text-white
 }
 .success-btn:hover{
-    @apply ring ring-4 ring-green-300 ring-offset-2 ring-offset-green-500
+    @apply  ring-4 ring-green-300 ring-offset-2 ring-offset-green-500
 }
 .fail{
     @apply grid gap-4 px-4 w-2/4 border-red-500 border-2 mx-auto my-6 p-2 rounded bg-red-200 text-red-800

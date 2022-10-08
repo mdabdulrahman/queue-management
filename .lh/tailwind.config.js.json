@@ -1,0 +1,22 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1665237896141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665239132678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n   content: [  \"./src/**/*.{js,jsx,ts,tsx}\"],\r\n   theme: {\r\n     extend: {},\r\n   },\r\n-  plugins: [require(\"daisyui\")],\r\n+  plugins: [],\r\n }\r\n"
+                }
+            ],
+            "date": 1665237896141,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\r\nmodule.exports = {\r\n  content: [  \"./src/**/*.{js,jsx,ts,tsx}\"],\r\n  theme: {\r\n    extend: {},\r\n  },\r\n  plugins: [require(\"daisyui\")],\r\n}\r\n"
+        }
+    ]
+}

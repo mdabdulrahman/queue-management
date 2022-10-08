@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Components/user/Sidebar.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1665238764911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665238790969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import React, { Component } from 'react'\r\n \r\n-export class  extends Component {\r\n+export class Sidebar extends Component {\r\n   render() {\r\n     return (\r\n-      <div></div>\r\n+      <div>Sidebar</div>\r\n     )\r\n   }\r\n }\r\n\\ No newline at end of file\n \r\n-export default \n+export default Sidebar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1665238797109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-rcfe\n\\ No newline at end of file\n+RTCCertificate\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1665238764911,
+            "name": "Commit-0",
+            "content": "rc"
+        }
+    ]
+}
