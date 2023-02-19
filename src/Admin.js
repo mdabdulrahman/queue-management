@@ -16,7 +16,12 @@ const datas=useAdminfirestore(collection(dbfirestore, "NewAccount"))
  
  emailjs.init("cIeMk0LUDw2EwLRfP")
  let accept=(obj)=>{
-  let userdata={...obj,vcode:(Math.floor((Math.random()*10000))),status:true}
+  let userdata={...obj,vcode:(Math.floor((Math.random()*10000))),status:true,sessions:
+  {
+    current:[],
+    past:[]
+  }
+  }
 console.log(userdata)
 try{
 
