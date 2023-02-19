@@ -18,6 +18,7 @@ import dbfirestore from './Components/firebase/DatabaseStore';
 import app from './Components/firebase/connect';
 import useAdminfirestore from './Components/snap';
 import Create from './Components/cust/Create';
+import Reader from './Components/user/Reader';
 function App() {
   /* Auth for Sign in  */
 const auth=getAuth(app)
@@ -74,7 +75,7 @@ alert("Wrong Application Number")
 }
 useEffect(() => {
   
-  if(userid!=false&&window.location.pathname!=`/user`&&window.location.pathname!="/admin"){
+  if(userid!=false&&window.location.pathname!=`/user`&&window.location.pathname!='/user/joincust'&&window.location.pathname!="/admin"){
     window.location.pathname=`user`
   }
 }, [userid])
@@ -116,6 +117,7 @@ return(
  <Route exact path='/activateaccount' element={<Createps createUser={createUser}/>}/>
  <Route exact path={`/user`} element={<Dashboard uid={userid} auth={auth}/>}/>
  <Route exact path='/join' element={<Create/>}/>
+ <Route exact path='/user/joincust' element={<Reader/>}/>
  </Routes>
  </BrowserRouter>
 )
