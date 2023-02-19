@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Components/Reader.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669125853650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669125853650,
+            "name": "Commit-0",
+            "content": "import React,{useState,useEffect} from 'react'\r\nimport QrScanner from 'qr-scanner';\r\nfunction Reader() {\r\n  /* When qr code get an result */\r\n  let done=(result,qrScanner)=>{\r\n    setResultTxt(result)\r\n    setButton(resultTxt)\r\n    setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)\r\n    console.log(result)\r\n    qrScanner.stop()\r\n    /* to validate the qr code */\r\n    let verify=result===\"http://fingers.co.in/MagnificoMoonLit\"?alert(\"Success\"):alert(\"Failure\");\r\n  }\r\n  /* starting the scan */\r\nlet scan=()=>{\r\nsetStarted(true)\r\nsetButton(resultTxt)\r\n  let video=document.getElementById(\"qr\")\r\n  const qrScanner = new QrScanner(\r\n    video,\r\n    result => done(result,qrScanner),\r\n    // No options provided. This will use the old api and is deprecated in the current version until next major version.\r\n    );\r\n    qrScanner.start()\r\n}\r\n  /* use states */\r\n  /* strated useState used to identify the scanning is started */\r\n  const [started,setStarted]=useState(false)\r\n  /* to change scannow button to scanning when scan started */\r\n  const [button,setButton]=useState( <button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)\r\n  const [resultTxt,setResultTxt]=useState(\"Scannning...\")\r\n  \r\nuseEffect(()=>{\r\n  console.log(resultTxt)\r\n})\r\nreturn (\r\n    <div>\r\n      <video id=\"qr\" width=\"250\" height=\"250\" ></video>\r\n    {button}\r\n\r\n    </div>\r\n  )\r\n}\r\nexport default Reader"
+        }
+    ]
+}

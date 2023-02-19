@@ -9,7 +9,7 @@ function Reader() {
     console.log(result)
     qrScanner.stop()
     /* to validate the qr code */
-    let verify=result==="http://fingers.co.in/MagnificoMoonLit"?alert("Success"):alert("Failure");
+
   }
   /* starting the scan */
 let scan=()=>{

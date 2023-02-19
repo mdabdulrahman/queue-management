@@ -57,7 +57,7 @@ let createUser=async(obj)=>{
    ;
   
 setuserid(user.uid)
-set(ref(db, 'users/' + user.uid),udata).then(()=>window.location.pathname=`user`)
+set(ref(db, 'users/' + user.uid),udata).then(()=>window.location.pathname=`user`).catch(e=>console.log(e))
          // ...
     })
     .catch((error) => {
