@@ -17,6 +17,7 @@ import { data } from 'autoprefixer';
 import dbfirestore from './Components/firebase/DatabaseStore';
 import app from './Components/firebase/connect';
 import useAdminfirestore from './Components/snap';
+import Create from './Components/cust/Create';
 function App() {
   /* Auth for Sign in  */
 const auth=getAuth(app)
@@ -114,6 +115,7 @@ return(
  <Route exact path='/admin' element={<Admin uid={userid}/>}/>
  <Route exact path='/activateaccount' element={<Createps createUser={createUser}/>}/>
  <Route exact path={`/user`} element={<Dashboard uid={userid} auth={auth}/>}/>
+ <Route exact path='/join' element={<Create/>}/>
  </Routes>
  </BrowserRouter>
 )

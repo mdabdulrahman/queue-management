@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/Components/user/Sessions.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1676820949364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1676821917910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from 'react'\r\n+\r\n+function Sessions(props) {\r\n+  return (\r\n+    <div>Sessions</div>\r\n+  )\r\n+}\r\n+\r\n+export default Sessions\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676821924411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,12 @@\n import React from 'react'\r\n \r\n function Sessions(props) {\r\n   return (\r\n-    <div>Sessions</div>\r\n-  )\r\n-}\r\n+    <div>\r\n \r\n-export default Sessions\n-import React from 'react'\r\n-\r\n-function Sessions() {\r\n-  return (\r\n-    <div>Sessions</div>\r\n+        \r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Sessions\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1676821935594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n function Sessions(props) {\r\n   return (\r\n     <div>\r\n \r\n-        \r\n+        <div>\r\n+            <h1\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1676821941793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n \r\n         <div>\r\n-            <h1\r\n+            <h1>Session </h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676821962104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n \r\n         <div>\r\n-            <h1>Session </h1>\r\n+            <h1>Session {</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676821968204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n \r\n         <div>\r\n-            <h1>Session {</h1>\r\n+            <h1>Session {props.data}</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676821976890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   return (\r\n     <div>\r\n \r\n         <div>\r\n-            <h1>Session {props.data}</h1>\r\n+            <h1>Session {props.data.i}</h1>\r\n+            <\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676821993882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div>\r\n \r\n         <div>\r\n             <h1>Session {props.data.i}</h1>\r\n-            <\r\n+            <h1>Curren</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676822000045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div>\r\n \r\n         <div>\r\n             <h1>Session {props.data.i}</h1>\r\n-            <h1>Curren</h1>\r\n+            <h1>Current Position</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676822026741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div>\r\n \r\n         <div>\r\n             <h1>Session {props.data.i}</h1>\r\n-            <h1>Current Position {</h1>\r\n+            <h1>Current Position {}</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676822078117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div>\r\n \r\n         <div>\r\n             <h1>Session {props.data.i}</h1>\r\n-            <h1>Current Position {props.d}</h1>\r\n+            <h1>Current Position {props.}</h1>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1676820949363,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Sessions() {\r\n  return (\r\n    <div>Sessions</div>\r\n  )\r\n}\r\n\r\nexport default Sessions"
+        }
+    ]
+}
