@@ -32,10 +32,10 @@ set(ref(db,"tempcust/"+id),{read:false,shopSessionId:"",status:false})
           
           Show this QR Code</h1>
           </div>
-          <div className=' mt-28 w-1/2'>
-          <div className='grid w-full gap-6   mx-6'>
+          <div className=' mt-28 w-full'>
+          <div className='text-center '>
            
-          <button className='bg-blue-500 px-6 p-2 text-white ' onClick={()=>get()}>Get QR Code</button>
+          <button className='bg-blue-500  px-6 p-2 text-white ' onClick={()=>get()}>Get QR Code</button>
           </div>
           <div className='w-1/2 mx-auto'>
           <canvas ref={img} className='my-11 mx-auto ' id="qr-code">
