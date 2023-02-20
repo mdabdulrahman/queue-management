@@ -53,6 +53,8 @@ setcurrentView("home")
 
 }
 
+
+
 useEffect(()=>{
   const refr = ref(db, 'users/'+props.uid);
   onValue(refr, (snapshot) => {
@@ -62,7 +64,7 @@ setdatas(data);
 {try{
   setsessions(
     Object.keys(data.session.cq).map((r,i)=>{
-      return(<Sessions id={r} i={i+1} pos={data.session.cq[r].status} scan={(id)=>scan(id)} tot={data.session.cq[r].tot}/>)
+      return(<Sessions uid={props.uid} data={data} id={r} i={i+1} pos={data.session.cq[r].status} scan={(id)=>scan(id)} tot={data.session.cq[r].tot}/>)
     }
     )
 
@@ -74,6 +76,12 @@ catch(e){
 } 
 console.log(Object.keys(data.session.cq))
   });},[props.uid])
+
+
+
+
+
+
 
 let newSession=()=>{
   console.log(datas.session)

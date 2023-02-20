@@ -8,6 +8,8 @@ function Create() {
   const [id,setid]=useState(window.localStorage.getItem("custId"))
   const [Qdata,setQdata]=useState("")
   const [Udata,setUdata]=useState("")
+  const [pos,setpos]=useState(null)
+  const [preStatus,setpreStatus]=useState(-1)
   console.log(id)
   
 
@@ -20,17 +22,35 @@ function Create() {
       onValue(refr, (snapshot) => {
         console.log("onval")
         const data = snapshot.val();
+        
     setUdata(data);
+    setpos(data.pos)
+    window.localStorage.setItem("pos",data.pos)
+    console.log(data)
+    console.log(data.pos)
+    console.log(Udata)
+    if(data.status===true)
+    {
+      window.localStorage.removeItem("custId")
+      window.localStorage.removeItem("pos")
+      setid(null)
+      window.location.reload()
+    } 
      if(data.read===true)
      {
-      
+  
       onValue(ref(db,'queues/shopsq/'+data.shopSessionId),
       (snapshot)=>{
         setQdata(snapshot.val())
+        if(snapshot.val().status!=0){
+setpreStatus(snapshot.val().status)
+        }
+      posMinus(snapshot.val())
       }
       )
       setcurrentView("onQ")
      }
+     
     
       });
 
@@ -39,6 +59,26 @@ function Create() {
     }
 
   },[id])
+
+let posMinus=(d)=>
+{
+   if(d.status!=0){
+    console.log(preStatus)
+        if(d.status!=preStatus){
+        let num=parseInt(window.localStorage.getItem("pos"))-1
+        console.log(Udata)
+              setpreStatus(d.status)
+          console.log(Udata)
+          update(ref(db,'tempcust/'+id),{pos:num})
+          if(num==0){
+            update(ref(db,'tempcust/'+id),{status:true})
+          }
+
+        }
+       }
+
+}
+
   const img=useRef()
     let get=()=>{
 let cid=Math.round(Math.random()*100000*3*2)+"queue"+Math.round(Math.random()*100000);
@@ -84,6 +124,11 @@ setid(cid)
 <h1>Shop Name:{Qdata.name}</h1>
 <h1>Your Position : {Udata.pos}</h1>
 <h1>Queue Length : {Qdata.tot}</h1>
+<button onClick={()=>{
+  window.localStorage.removeItem("custId")
+  setid(null)
+  window.location.reload()
+}}>Leave</button>
           </div>:null
 }
     </div>
