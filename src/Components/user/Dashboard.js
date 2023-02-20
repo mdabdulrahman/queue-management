@@ -20,16 +20,19 @@ const [currentView,setcurrentView]=useState("home")
 let scan=(id)=>{
   setcurrentView("scan");
   setsessionId(id)
+  console.log(id)
 }
 
 let addCust=(id)=>{
- 
-  update(ref(db,'users/'+props.uid+'session/cq/'+sessionId+'/cust'),
+  console.log(sessionId)
+ console.log(datas.session.cq[sessionId])
+  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId+'/cust'),
   {[datas.session.cq[sessionId].tot+1]:id}
   )
+  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId),{tot:datas.session.cq[sessionId].tot+1})
 alert(id)
 setcurrentView("home")
-setsessionId("")
+
 }
 
 useEffect(()=>{
