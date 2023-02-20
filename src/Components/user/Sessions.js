@@ -8,7 +8,7 @@ function Sessions(props) {
             <h1>Session {props.i}</h1>
             <h1>Current Position {props.pos}</h1>
             <h1>Total {props.tot}</h1>
-            <button className='bg-green-500 px-2 py-1 text-white'>Join a Customer</button>
+            <button onClick={()=>props.scan(props.r)} className='bg-green-500 px-2 py-1 text-white'>Join a Customer</button>
         </div>
     </div>
   )

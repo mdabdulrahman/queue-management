@@ -8,11 +8,26 @@ import Header from '../Header';
 import { data } from 'autoprefixer';
 import Sessions from './Sessions';
 import Sidebar from './Sidebar';
+import Reader from './Reader';
 
 function Dashboard(props) {
   console.log(props.uid)
 const [datas, setdatas] = useState(null)
+const [sessionId,setsessionId]=useState("")
 const [sessions,setsessions]=useState("")
+const [currentView,setcurrentView]=useState("home")
+
+let scan=(id)=>{
+  setcurrentView("scan");
+  setsessionId(id)
+}
+
+let addCust=(id)=>{
+  setcurrentView("home")
+  setsessionId("")
+alert(id)
+}
+
 useEffect(()=>{
   const refr = ref(db, 'users/'+props.uid);
   onValue(refr, (snapshot) => {
@@ -22,7 +37,7 @@ setdatas(data);
 {try{
   setsessions(
     Object.keys(data.session.cq).map((r,i)=>{
-      return(<Sessions i={i+1} pos={data.session.cq[r].status} tot={data.session.cq[r].tot}/>)
+      return(<Sessions id={r} i={i+1} pos={data.session.cq[r].status} scan={(id)=>scan(id)} tot={data.session.cq[r].tot}/>)
     }
     )
 
@@ -105,13 +120,14 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
   return (
     <div>
       <Header btn={"signOut"}/>
-      <Sidebar/>
+   {currentView==="home"?
       <div className='ml-24'>
       <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
     <button className='bg-blue-500 p-2 text-white' onClick={()=>newSession()}>New Session</button>
     {sessions}
       
-      </div>
+      </div>:currentView==="scan"?<Reader finish={(id)=>addCust(id)}/>:null
+}
       </div>
   )
 }

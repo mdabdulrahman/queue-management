@@ -6,6 +6,7 @@ import {  onAuthStateChanged,getAuth,signInWithEmailAndPassword } from "firebase
 import { useNavigate } from 'react-router-dom';
 import Success from './Components/Success';
 import Fail from './Components/Fail';
+import Menu from './Components/Menu';
 
 function SignInpg(props) {
   const auth=getAuth(app)
@@ -46,10 +47,13 @@ const [signStatus, setsignStatus] = useState(null)
  
   return (
     <div>
-      <Header btn="create"/>
+      <Header btn="create">
+        <Menu/>
+      </Header>
         <SignIn signin={props.signIn} signStatus={props.signStatus}>
         
         </SignIn>
+
     </div>
   )
 }

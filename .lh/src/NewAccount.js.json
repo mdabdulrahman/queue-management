@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1662560632034,
@@ -52,6 +52,26 @@
                 {
                     "date": 1662999614506,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import Header from './Components/landingPage/Header'\r\n+import Header from './Components/Header'\r\n import Newform from './Components/NewAccount/Newform'\r\n \r\n function NewAccount() {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1676865867650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n-        <Header btn=\"signIn\"/>\r\n+        <Header btn=\"signIn\">\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676865873282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n function NewAccount() {\r\n   return (\r\n     <div>\r\n         <Header btn=\"signIn\">\r\n+          </Header\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676865879414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n function NewAccount() {\r\n   return (\r\n     <div>\r\n         <Header btn=\"signIn\">\r\n-          </Header\r\n+          \r\n+          </Header>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1676865886116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import React from 'react'\r\n import Header from './Components/Header'\r\n+import Menu from './Components/Menu'\r\n import Newform from './Components/NewAccount/Newform'\r\n \r\n function NewAccount() {\r\n   return (\r\n     <div>\r\n         <Header btn=\"signIn\">\r\n-          \r\n+          <Menu</Menu>\r\n           </Header>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1676865897862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function NewAccount() {\r\n   return (\r\n     <div>\r\n         <Header btn=\"signIn\">\r\n-          <Menu</Menu>\r\n+          <Menu/>\r\n           </Header>\r\n         <Newform/>\r\n     </div>\r\n   )\r\n"
                 }
             ],
             "date": 1662560632034,

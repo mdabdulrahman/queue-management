@@ -3,7 +3,7 @@ import QrScanner from 'qr-scanner';
 import load from './load.gif';
 import icon from "./icon.png";
 import Header from '../Header';
-function Reader() {
+function Reader(props) {
     /* use states */
   /* strated useState used to identify the scanning is started */
   const [started,setStarted]=useState(false)
@@ -13,7 +13,7 @@ function Reader() {
   let done=(result,qrScanner)=>{
     setResultTxt(result)
  
-   
+   props.finish(result)
     /* setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>) */
 
   }
@@ -41,7 +41,7 @@ let ico=<svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 </svg>
 return (
     <div className='font-["Poppins"]'>
-        <Header/>
+   
       <div className='container   w-full h-full mx-auto text-center'>
        
         
