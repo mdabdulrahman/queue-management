@@ -23,9 +23,13 @@ let scan=(id)=>{
 }
 
 let addCust=(id)=>{
-  setcurrentView("home")
-  setsessionId("")
+ 
+  update(ref(db,'users/'+props.uid+'session/cq/'+sessionId+'/cust'),
+  {[datas.session.cq[sessionId].tot+1]:id}
+  )
 alert(id)
+setcurrentView("home")
+setsessionId("")
 }
 
 useEffect(()=>{
@@ -116,7 +120,6 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
 
 }
 }
-
   return (
     <div>
       <Header btn={"signOut"}/>

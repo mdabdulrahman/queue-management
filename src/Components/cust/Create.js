@@ -9,7 +9,7 @@ function Create() {
   const img=useRef()
     let get=()=>{
 let id=Math.round(Math.random()*100000*3*2)+"queue"+Math.round(Math.random()*100000);
-set(ref(db,"tempcust/"+id),{read:false,shopSessionId:"",status:false})
+set(ref(db,"tempcust/"+id),{read:false,shopSessionId:"",status:false,pos:0})
     QrCreator.render(
         {
             text:id,
