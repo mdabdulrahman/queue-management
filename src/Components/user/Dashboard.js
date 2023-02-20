@@ -25,12 +25,30 @@ let scan=(id)=>{
 
 let addCust=(id)=>{
   console.log(sessionId)
+
  console.log(datas.session.cq[sessionId])
   update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId+'/cust'),
   {[datas.session.cq[sessionId].tot+1]:id}
+  ).then(
+    ()=>
+    {
+      update(ref(db,'queues/shopsq/'+sessionId),
+      
+      {tot:datas.session.cq[sessionId].tot+1}
+      )
+    }
   )
-  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId),{tot:datas.session.cq[sessionId].tot+1})
-alert(id)
+  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId),{tot:datas.session.cq[sessionId].tot+1}).then(()=>{
+ update(ref(db,"tempcust/"+id),
+ {
+  pos:datas.session.cq[sessionId].tot+1,
+  read:true,
+  shopSessionId:sessionId,
+
+ }
+ ) }
+  )
+  alert(id)
 setcurrentView("home")
 
 }
