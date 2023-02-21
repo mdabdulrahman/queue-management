@@ -28,20 +28,25 @@ let addCust=(id)=>{
 
  console.log(datas.session.cq[sessionId])
   update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId+'/cust'),
-  {[datas.session.cq[sessionId].tot+1]:id}
+  {[datas.session.cq[sessionId].perTot+1]:id}
   ).then(
     ()=>
     {
       update(ref(db,'queues/shopsq/'+sessionId),
-      
+
       {tot:datas.session.cq[sessionId].tot+1}
       )
+      update(ref(db,'queues/shopsq/'+sessionId+"/cust"),
+
+      {[datas.session.cq[sessionId].perTot+1]:id}
+      )
+
     }
   )
-  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId),{tot:datas.session.cq[sessionId].tot+1}).then(()=>{
+  update(ref(db,'users/'+props.uid+'/session/cq/'+sessionId),{tot:datas.session.cq[sessionId].tot+1,perTot:datas.session.cq[sessionId].perTot+1}).then(()=>{
  update(ref(db,"tempcust/"+id),
  {
-  pos:datas.session.cq[sessionId].tot+1,
+  pos:datas.session.cq[sessionId].perTot+1,
   read:true,
   shopSessionId:sessionId,
 
@@ -73,7 +78,7 @@ setdatas(data);
 catch(e){
   console.log(e)
 }
-} 
+}
 console.log(Object.keys(data.session.cq))
   });},[props.uid])
 
@@ -98,6 +103,7 @@ update(ref(db,'users/'+props.uid+'/session'),
     ,
     "status":0,
     tot:0,
+    perTot:0,
     message:"wait"
   }
 },
@@ -112,6 +118,9 @@ status:false
 
     update(ref(db,'queues/shopsq'),{[temp]:{
       "name":datas.bname,
+      "cust":{
+        0:"fgfhfdf"
+      },
       "status":0,
       tot:0,
       message:"wait"
@@ -129,6 +138,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
     cust:["fgfgfgsdfggdfg"],
     name:datas.bname,
     status:0,
+    perTot:0,
     tot:0,
     message:"wait"
   }
@@ -138,6 +148,9 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
   update(ref(db,'queues/shopsq'),{[temp]:{
     "name":datas.bname,
     "status":0,
+    "cust":{
+      0:"fgfhfdf"
+    },
     tot:0,
     message:"wait"
   }})
@@ -157,7 +170,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
       <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
     <button className='bg-blue-500 p-2 text-white' onClick={()=>newSession()}>New Session</button>
     {sessions}
-      
+
       </div>:currentView==="scan"?<Reader finish={(id)=>addCust(id)}/>:null
 }
       </div>
