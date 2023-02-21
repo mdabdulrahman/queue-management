@@ -166,7 +166,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
     <div>
       <Header btn={"signOut"}/>
    {currentView==="home"?
-      <div className='ml-24'>
+      <div className='ml-8'>
       <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
     <button className='bg-blue-500 p-2 text-white' onClick={()=>newSession()}>New Session</button>
     {sessions}

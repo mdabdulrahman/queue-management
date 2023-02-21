@@ -34,12 +34,12 @@ setcust(Object.keys(snapshot.val().cust))
   return (
     <div>
 
-        <div className='border-2 w-3/4'>
-            <h1>Session {props.i}</h1>
-            <h1>Current Position {props.pos}</h1>
-            <h1>Total {props.tot}</h1>
-            <button onClick={()=>props.scan(props.id)} className='bg-green-500 px-2 py-1 text-white'>Join a Customer</button>
-       <button onClick={()=>nextPerson(props.id)} className='bg-orange-500 px-2 py-1 text-white'>Next Person</button>
+        <div className='border-2 mt-4 w-3/4 p-2  rounded-md'>
+            <h1 className='font-bold text-lg text-center'>Session {props.i}</h1>
+            <h1 className='font-semibold py-2'>Total Finished : {props.pos}</h1>
+            <h1 className='font-semibold py-2'>Total Members : {props.tot}</h1>
+            <button onClick={()=>props.scan(props.id)} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Join a Customer</button>
+       <button onClick={()=>nextPerson(props.id)} className='bg-orange-500 mx-2 rounded-sm px-2 py-1 text-white'>Next Person</button>
         </div>
     </div>
   )

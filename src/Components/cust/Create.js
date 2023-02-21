@@ -129,11 +129,11 @@ setid(cid)
           </canvas>
 
 </div>
-          </div></>:currentView==="onQ"?<div>
-<h1>Shop Name:{Qdata.name}</h1>
-<h1>Your Position : {pos}</h1>
+          </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto'>
+<h1 className='text-lg font-bold text-center'>Shop Name:{Qdata.name}</h1>
+<h1 className='font-bold text-lg'>Your Position : {pos}</h1>
 <h1>Queue Length : {Qdata.tot}</h1>
-<button onClick={()=>{
+<button className='bg-red-500 p-3' onClick={()=>{
   window.localStorage.removeItem("custId")
   setid(null)
   window.location.reload()
