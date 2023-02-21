@@ -129,7 +129,7 @@ setid(cid)
           </canvas>
 
 </div>
-          </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto'>
+          </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto text-center'>
 <h1 className='text-lg font-bold text-center'>Shop Name:{Qdata.name}</h1>
 <h1 className='font-bold text-lg'>Your Position : {pos}</h1>
 <h1>Queue Length : {Qdata.tot}</h1>
