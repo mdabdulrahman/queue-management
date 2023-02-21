@@ -120,7 +120,7 @@ setid(cid)
           <div className=' mt-28 w-full'>
           <div className='text-center '>
 
-          <button className='bg-blue-500  px-6 p-2 text-white ' onClick={()=>get()}>Get QR Code</button>
+          <button className='bg-blue-500 my-3 px-6 p-2 text-white ' onClick={()=>get()}>Get QR Code</button>
           {/* {id!=null?<button className='bg-green-500  px-6 p-2 text-white ' onClick={()=>id=id}>Scanned</button>:null} */}
           </div>
           <div className='w-1/2 mx-auto'>
