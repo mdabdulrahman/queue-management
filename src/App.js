@@ -66,6 +66,7 @@ set(ref(db, 'users/' + user.uid),udata).then(()=>window.location.pathname=`user`
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorMessage)
+      alert(errorMessage)
       // ..
     });
 }
