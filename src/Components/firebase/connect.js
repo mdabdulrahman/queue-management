@@ -7,9 +7,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseconfig={apiKey: "AIzaSyCordLSv_X9Fh0bizCf7_mTZNZQO5qa3C8",authDomain: "queue-mangement-941da.firebaseapp.com",projectId: "queue-mangement-941da",storageBucket: "queue-mangement-941da.appspot.com",messagingSenderId: "1015137183481",appId: "1:1015137183481:web:766d2cdf9904df811be428",measurementId: "G-R909974S91",databaseURL:"https://queue-mangement-941da-default-rtdb.asia-southeast1.firebasedatabase.app"};
-// Initialize Firebase
-const app = initializeApp(/* process.env.REACT_APP_FIREBASE_CONFIG */firebaseconfig);
+const app = initializeApp( process.env.REACT_APP_FIREBASE_CONFIG );
 const analytics = getAnalytics(app);
 
 
