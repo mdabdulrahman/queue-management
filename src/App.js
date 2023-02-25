@@ -48,6 +48,7 @@ let createUser=async(obj)=>{
     }
     if (udata.email!=obj.email){
      alert("Wrong Email ID")
+     window.location.reload()
     }
     if(udata.vcode==obj.vcode,udata.email==obj.email)
     console.log("User datas verified")
