@@ -7,7 +7,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const app = initializeApp( process.env.REACT_APP_FIREBASE_CONFIG );
+const app = initializeApp(JSON.parse( process.env.REACT_APP_FIREBASE_CONFIG) );
 const analytics = getAnalytics(app);
 
 
