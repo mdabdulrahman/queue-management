@@ -59,7 +59,7 @@ let createUser=async(obj)=>{
    ;
   
 
-set(ref(db, 'users/' + user.uid),udata).then(()=>{window.location.pathname=`user`;setuserid(user.uid)}).catch(e=>alert(e))
+set(ref(db, 'users/' + user.uid),udata).then(()=>{setTimeout(()=>{window.location.pathname=`user`;setuserid(user.uid)},10000);}).catch(e=>alert(e))
          // ...
     })
     .catch((error) => {
