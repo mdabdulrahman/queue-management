@@ -138,12 +138,7 @@ setid(cid)
 <h1 className='font-semibold  text-xl mb-2'>Your Position  </h1>
  <p className='border w-1/6 my-4 rounded-full  text-center mx-auto text-3xl font-bold'> {pos}</p>
 <h1>Queue Length : {Qdata.tot}</h1>
-<button className='fail-btn py-2 my-2' onClick={()=>{
 
-  window.localStorage.removeItem("custId")
-  setid(null)
-  window.location.reload()
-}}>Leave</button>
 </div>
 {pos==1?<h1 className='text-lg success font-bold text-center'>Code : {id.slice(-4)}</h1>:null}
 <svg fill="none" stroke="currentColor" className='w-8 mx-auto p-2  secondary-bg rounded-full' strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -153,6 +148,12 @@ setid(cid)
 
 <h1 className='text-md p-2 primary-text text-center'>{Qdata.message}</h1>
         </div>
+        <button className='fail-btn py-2 my-2' onClick={()=>{
+
+  window.localStorage.removeItem("custId")
+  setid(null)
+  window.location.reload()
+}}>Leave</button>
           </div>:null
 }
 
