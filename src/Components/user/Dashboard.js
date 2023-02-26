@@ -55,7 +55,7 @@ let addCust=(id)=>{
  }
  ) }
   )
-  alert(id)
+  alert("Customer Added Sucessfully")
 setcurrentView("home")
 
 }
