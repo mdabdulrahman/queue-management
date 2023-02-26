@@ -1,6 +1,7 @@
 import React,{useEffect,useState,useRef} from 'react'
 import { getDatabase, ref, onValue,set,update, get} from "firebase/database";
 import db from "../firebase/db"
+import send from './send.png'
 function Sessions(props) {
 
 const [cust,setcust]=useState(["","Loading.."])
@@ -58,17 +59,18 @@ setcust(Object.keys(snapshot.val().cust))
   return (
     <div>
 
-        <div className='border-2 mt-4 w-5/6 p-2  rounded-md'>
+        <div className='border-2 p-4 mt-4 w-5/6 lg:w-3/6   rounded-md'>
             <h1 className='font-bold text-lg text-center'> {props.ssName}</h1>
             <h1 className='font-semibold py-2'>Total Finished : {props.pos}</h1>
             <h1 className='font-semibold py-2'>Total Members : {props.tot}</h1>
             <h1 className='font-semibold py-2'>First Person Id : {cust.length>=2?firstCust[1].slice(-4):"No persons"}</h1>
          <h1 className='font-semibold py-2'>Current Message : {props.message}</h1>
            <div className='flex gap-2'>
-            <input type="text" className='form-control form' ref={message} placeholder='Enter the message'></input>
-            <button onClick={()=>updateMessage()} className='success-btn p-2'><svg fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-</svg></button>
+            <input type="text" className='form-control ' ref={message} placeholder='Enter the message'></input>
+            <button onClick={()=>updateMessage()} className='secondary-bg w-11 p-3 rounded-full '>
+
+ <img src={send} className='w-11  mx-auto'/>
+            </button>
            </div>
             <button onClick={()=>props.scan(props.id)} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Join a Customer</button>
        <button onClick={()=>nextPerson(props.id)} className='bg-orange-500 mx-2 rounded-sm px-2 py-1 text-white'>Next Person</button>

@@ -174,8 +174,8 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
    {currentView==="home"?
       <div className='ml-8'>
       <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
-      <input type="text" className='form-control form' ref={sessionName} placeholder='Session name'></input>
-    <button className='bg-blue-500 p-2 text-white' onClick={()=>newSession()}>New Session</button>
+      <input type="text" className='form-control form lg:w-2/4' ref={sessionName} placeholder='Session name'></input>
+    <button className='bg-blue-500 p-2 lg:ml-6 text-white' onClick={()=>newSession()}>New Session</button>
     {sessions}
 
       </div>:currentView==="scan"?<Reader finish={(id)=>addCust(id)}/>:null
