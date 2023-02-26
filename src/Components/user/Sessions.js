@@ -65,7 +65,7 @@ setcust(Object.keys(snapshot.val().cust))
             <h1 className='font-semibold py-2'>First Person Id : {cust.length>=2?firstCust[1].slice(-4):"No persons"}</h1>
          <h1 className='font-semibold py-2'>Current Message : {props.message}</h1>
            <div>
-            <input type="text" ref={message} placeholder='Enter the message'></input>
+            <input type="text" className='form-control form' ref={message} placeholder='Enter the message'></input>
             <button onClick={()=>updateMessage()} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Add a Message</button>
            </div>
             <button onClick={()=>props.scan(props.id)} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Join a Customer</button>
