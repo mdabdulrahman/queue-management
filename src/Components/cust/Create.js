@@ -136,7 +136,7 @@ setid(cid)
 <h1 className='text-md w-2/4 mx-auto p-2 my-3 rounded-sm shadow-md text-white secondary-bg primary-text text-center'>{Qdata.ssName}</h1>
 <div className='border-2 my-4 w-3/4 mx-auto rounded p-3'>
 <h1 className='font-semibold  text-xl mb-2'>Your Position  </h1>
- <p className='border w-1/6 my-4 mx-auto text-xl font-bold'> {pos}</p>
+ <p className='border w-1/6 my-4 mx-auto text-2xl font-bold'> {pos}</p>
 <h1>Queue Length : {Qdata.tot}</h1>
 <button className='fail-btn py-2 my-2' onClick={()=>{
 
