@@ -130,19 +130,28 @@ setid(cid)
           </canvas>
 
 </div>
-          </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto text-center'>
-<h1 className='text-lg font-bold text-center'>Shop Name:{Qdata.name}</h1>
-<h1 className='text-lg font-bold text-center'>Session Name:{Qdata.ssName}</h1>
+          </div></>:currentView==="onQ"?<div className='w-5/6 lg:w-2/6 mx-auto text-center'>
 
-<h1 className='font-bold text-lg'>Your Position : {pos}</h1>
+<h1 className='text-lg p-3 my-4 rounded-sm shadow-md text-white primary-bg secondary-txt text-center'>Welcome to {Qdata.name}</h1>
+<h1 className='text-md w-2/4 mx-auto p-2 my-3 rounded-sm shadow-md text-white secondary-bg primary-text text-center'>{Qdata.ssName}</h1>
+
+<h1 className='font-semibold  text-xl mb-2'>Your Position  </h1>
+ <p className='border w-1/6 mx-auto text-xl font-bold'> {pos}</p>
 <h1>Queue Length : {Qdata.tot}</h1>
 <button className='bg-red-500 p-3' onClick={()=>{
+
   window.localStorage.removeItem("custId")
   setid(null)
   window.location.reload()
 }}>Leave</button>
-{pos==1?<h1 className='text-lg font-bold text-center'>Code :{id.slice(-4)}</h1>:null}
-<h1 className='text-lg font-bold text-center'>Message :{Qdata.message}</h1>
+{pos==1?<h1 className='text-lg success font-bold text-center'>Code : {id.slice(-4)}</h1>:null}
+<svg fill="none" stroke="currentColor" className='w-11 mx-auto p-2  secondary-bg rounded-full' strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+</svg>
+<div className='secondary-bg'>
+
+<h1 className='text-lg p-2 primary-text text-center'>{Qdata.message}</h1>
+        </div>
           </div>:null
 }
 
