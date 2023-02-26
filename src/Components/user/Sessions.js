@@ -66,12 +66,12 @@ setcust(Object.keys(snapshot.val().cust))
          <h1 className='font-semibold py-2'>Current Message : {props.message}</h1>
            <div>
             <input type="text" className='form-control form' ref={message} placeholder='Enter the message'></input>
-            <button onClick={()=>updateMessage()} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Add a Message</button>
+            <button onClick={()=>updateMessage()} className='success-btn p-2'>Add a Message</button>
            </div>
             <button onClick={()=>props.scan(props.id)} className='bg-green-500 rounded-sm my-2 mx-2 px-2 py-1 text-white'>Join a Customer</button>
        <button onClick={()=>nextPerson(props.id)} className='bg-orange-500 mx-2 rounded-sm px-2 py-1 text-white'>Next Person</button>
        {
-       props.tot==0?<button onClick={()=>deleteSession(props.id)} className='bg-red-500 mx-2 rounded-sm px-2 py-1 text-white'>Delete</button>:null
+       props.tot==0?<button onClick={()=>deleteSession(props.id)} className='fail-btn p-2 my-2'>Delete</button>:null
        
       }
         </div>
