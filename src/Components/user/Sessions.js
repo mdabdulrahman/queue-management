@@ -4,6 +4,7 @@ import db from "../firebase/db"
 function Sessions(props) {
 
 const [cust,setcust]=useState(["","Loading.."])
+const [firstCust,setfirstCust]=useState(["","Loading.."])
 const message=useRef()
 
 let updateMessage=()=>{
@@ -47,7 +48,7 @@ let st=props.data.session.cq[id].status+1;
 useEffect(() => {
   onValue(ref(db,'queues/shopsq/'+props.id),(snapshot)=>
   {
-
+setfirstCust(Object.values(snapshot.val().cust))
 setcust(Object.keys(snapshot.val().cust))
   } )
 
@@ -61,7 +62,7 @@ setcust(Object.keys(snapshot.val().cust))
             <h1 className='font-bold text-lg text-center'> {props.ssName}</h1>
             <h1 className='font-semibold py-2'>Total Finished : {props.pos}</h1>
             <h1 className='font-semibold py-2'>Total Members : {props.tot}</h1>
-            <h1 className='font-semibold py-2'>First Person Id : {cust.length>=2?cust[1].slice(-4):"No persons"}</h1>
+            <h1 className='font-semibold py-2'>First Person Id : {cust.length>=2?firstCust[1].slice(-4):"No persons"}</h1>
          <h1 className='font-semibold py-2'>Current Message : {props.message}</h1>
            <div>
             <input type="text" ref={message} placeholder='Enter the message'></input>
