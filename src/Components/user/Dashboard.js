@@ -9,12 +9,14 @@ import { data } from 'autoprefixer';
 import Sessions from './Sessions';
 import Sidebar from './Sidebar';
 import Reader from './Reader';
+import { useRef } from 'react';
 
 function Dashboard(props) {
   console.log(props.uid)
 const [datas, setdatas] = useState(null)
 const [sessionId,setsessionId]=useState("")
 const [sessions,setsessions]=useState("")
+const sessionName=useRef()
 const [currentView,setcurrentView]=useState("home")
 
 let scan=(id)=>{
@@ -69,7 +71,7 @@ setdatas(data);
 {try{
   setsessions(
     Object.keys(data.session.cq).map((r,i)=>{
-      return(<Sessions uid={props.uid} data={data} id={r} i={i+1} pos={data.session.cq[r].status} scan={(id)=>scan(id)} tot={data.session.cq[r].tot}/>)
+      return(<Sessions uid={props.uid} data={data} id={r} i={i+1} pos={data.session.cq[r].status} ssName={data.session.cq[r].ssName} message={data.session.cq[r].message}  scan={(id)=>scan(id)} tot={data.session.cq[r].tot}/>)
     }
     )
 
@@ -102,6 +104,7 @@ update(ref(db,'users/'+props.uid+'/session'),
     }
     ,
     "status":0,
+    ssName:sessionName.current.value,
     tot:0,
     perTot:0,
     message:"wait"
@@ -121,12 +124,13 @@ status:false
       "cust":{
         0:"fgfhfdf"
       },
+      ssName:sessionName.current.value,
       "status":0,
       tot:0,
       message:"wait"
     }})
 
-
+sessionName.current.value=""
 
 })
   }
@@ -137,6 +141,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
   [temp]:{
     cust:["fgfgfgsdfggdfg"],
     name:datas.bname,
+    ssName:sessionName.current.value,
     status:0,
     perTot:0,
     tot:0,
@@ -154,7 +159,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
     tot:0,
     message:"wait"
   }})
-
+  sessionName.current.value=""
 
 
 })
@@ -168,6 +173,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
    {currentView==="home"?
       <div className='ml-8'>
       <h1>Hello {datas!=null?datas.Oname:"loading............"} </h1>
+      <input type="text" ref={sessionName} placeholder='Session name'></input>
     <button className='bg-blue-500 p-2 text-white' onClick={()=>newSession()}>New Session</button>
     {sessions}
 
