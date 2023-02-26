@@ -10,10 +10,10 @@ const message=useRef()
 let updateMessage=()=>{
   update(ref(db,'users/'+props.uid+'/session/cq/'+props.id),{message:message.current.value}).then(
     ()=>{
-      update(ref(db,'queues/shopsq/'+props.id),{message:message.current.value})
+      update(ref(db,'queues/shopsq/'+props.id),{message:message.current.value}).then(()=>message.current.value="")
     }
   )
-  message.current.value=""
+
 }
 
 

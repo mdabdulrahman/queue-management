@@ -128,9 +128,9 @@ status:false
       "status":0,
       tot:0,
       message:"wait"
-    }})
+    }}).then(()=>
+    sessionName.current.value="")
 
-sessionName.current.value=""
 
 })
   }
@@ -159,8 +159,8 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
     ssName:sessionName.current.value,
     tot:0,
     message:"wait"
-  }})
-  sessionName.current.value=""
+  }}).then(()=>sessionName.current.value="")
+  
 
 
 })

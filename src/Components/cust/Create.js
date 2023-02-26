@@ -133,6 +133,7 @@ setid(cid)
           </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto text-center'>
 <h1 className='text-lg font-bold text-center'>Shop Name:{Qdata.name}</h1>
 <h1 className='text-lg font-bold text-center'>Session Name:{Qdata.ssName}</h1>
+
 <h1 className='font-bold text-lg'>Your Position : {pos}</h1>
 <h1>Queue Length : {Qdata.tot}</h1>
 <button className='bg-red-500 p-3' onClick={()=>{
@@ -140,8 +141,11 @@ setid(cid)
   setid(null)
   window.location.reload()
 }}>Leave</button>
+{pos==1?<h1 className='text-lg font-bold text-center'>Code :{id.slice(-4)}</h1>:null}
+<h1 className='text-lg font-bold text-center'>Message :{Qdata.message}</h1>
           </div>:null
 }
+
     </div>
   )
 }
