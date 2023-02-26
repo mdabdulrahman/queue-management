@@ -156,6 +156,7 @@ update(ref(db,'users/'+props.uid+"/session/cq"),
     "cust":{
       0:"fgfhfdf"
     },
+    ssName:sessionName.current.value,
     tot:0,
     message:"wait"
   }})

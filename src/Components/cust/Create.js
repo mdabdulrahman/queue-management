@@ -39,6 +39,7 @@ function Create() {
       onValue(ref(db,'queues/shopsq/'+data.shopSessionId),
       (snapshot)=>{
         setQdata(snapshot.val())
+        console.log(snapshot.val())
         console.log(snapshot.val().cust)
         let r=Object.values(snapshot.val().cust).map((r)=>r)
         if(r.indexOf(id)==-1)
@@ -131,6 +132,7 @@ setid(cid)
 </div>
           </div></>:currentView==="onQ"?<div className='w-3/4 mx-auto text-center'>
 <h1 className='text-lg font-bold text-center'>Shop Name:{Qdata.name}</h1>
+<h1 className='text-lg font-bold text-center'>Session Name:{Qdata.ssName}</h1>
 <h1 className='font-bold text-lg'>Your Position : {pos}</h1>
 <h1>Queue Length : {Qdata.tot}</h1>
 <button className='bg-red-500 p-3' onClick={()=>{
