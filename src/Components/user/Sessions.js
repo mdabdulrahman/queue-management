@@ -58,7 +58,7 @@ setcust(Object.keys(snapshot.val().cust))
   return (
     <div>
 
-        <div className='border-2 mt-4 w-3/4 p-2  rounded-md'>
+        <div className='border-2 mt-4 w-5/6 p-2  rounded-md'>
             <h1 className='font-bold text-lg text-center'> {props.ssName}</h1>
             <h1 className='font-semibold py-2'>Total Finished : {props.pos}</h1>
             <h1 className='font-semibold py-2'>Total Members : {props.tot}</h1>
