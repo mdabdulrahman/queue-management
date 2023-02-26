@@ -11,6 +11,7 @@ function Reader(props) {
   const [resultTxt,setResultTxt]=useState("")
   /* When qr code get an result */
   let done=(result,qrScanner)=>{
+    qrScanner.stop()
     setResultTxt(result)
  
    props.finish(result)
